@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<center>
+<br>
+   <font size="4.5">
+    <a> Tamanho da Primeira Sequência: {{seq1_len}}</a>
+    </br>
+    <a> Tamanho da Segunda Sequência: {{seq2_len}}</a></font>
+
+{% for a in read %}
+<br>
+
+    {% for b in a %}
+        {% if b == "A" %}
+            <font face="monospace" color="red" size="6">{{b}}</font>
+
+        {% elif b == "G" %}
+            <font face="monospace" color="green" size="6">{{b}}</font>
+
+        {% elif b == "C" %}
+            <font face="monospace" color="blue" size="6">{{b}}</font>
+
+        {% elif b == "U" %}
+            <font face="monospace" color="purple" size="6">{{b}}</font>
+        {% elif b == "T" %}
+            <font face="monospace" color="brown" size="6">{{b}}</font>
+
+        {% else %}
+            <font face="monospace" size="6">{{b}}</font>
+        {% endif %}
+
+
+    {% endfor %}
+    <tr><td>
+    </td></tr>
+
+
+    {% endfor %}
+</br>
+    <font size="4.5">{{exec}}</font>
+
+</br>
+     <input type='button' value='Voltar' onclick='history.go(-1)' />
+    <br>
+
+    <div class="row">
+    <div class="linha"><img src="{% static "css/graph_upload.png" %}" alt="GC Content" width="300" height="150" style="width: auto;
+    height: auto;"></div>
+    <div class="linha"><img src="{% static "css/rna_convertido_upload.png" %}" alt="RNA" width="60%" height="60%" style="margin-top:90px"></div>
+
+    </div>
+    <style>
+.linha{
+
+  width: 50%;
+.row::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+</style>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</center>
+
+
+{% endblock %}

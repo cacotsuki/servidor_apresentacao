@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<center><a>Digite as Duas Sequências Abaixo</a></center>
+	<center>
+	<form method="post"/>
+{% csrf_token %}
+{{ form }}
+<table>
+<tr><td>
+    <!--{{ a }}-->
+</td></tr>
+</table>
+<button type="submit">Executar</button>
+	</center>
+
+{% endblock %}

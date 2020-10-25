@@ -1,0 +1,9 @@
+Sankoff:
+seq1: (10)	AGCGACGACG
+seq2: (10)	AACGACGACG
+Score: 23.6629
+AGCGACGACG
+..((....))
+AACGACGACG
+Backtrace total time: 0:00.000005
+Total execution time: 0:00.011315
