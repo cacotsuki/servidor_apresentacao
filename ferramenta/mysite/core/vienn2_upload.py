@@ -20,7 +20,7 @@ def abre_arquivo_upload():
     seq_mid = []
     hamb = []
     lista = []
-    with open('/home/livanski/Music/upload_final/django-upload-example/resultado_cuda_sankoff_upload.txt') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upload.txt') as file:
         for line in file:
             hamb.append(line)
     lista.append(hamb[4])
@@ -79,7 +79,7 @@ def get_exec_time_upload():
     ex = []
     exec_time = []
     exec_limpo = []
-    with open('/home/livanski/Music/upload_final/django-upload-example/resultado_cuda_sankoff_upload.txt') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upload.txt') as file:
         for line in file:
             ex.append(line)
     exec_time = ex[8]
@@ -91,7 +91,7 @@ def remove_barra_upload():
     hamb = []
     novo = []
 
-    with open('/home/livanski/Music/upload_final/django-upload-example/media/arquivo.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta') as file:
         for line in file:
             hamb.append(line)
 
@@ -123,7 +123,7 @@ def data_visualization2():
     hamb = []
     #subprocess.check_output(['dos2unix', 'write.fasta'], cwd='/home/livanski/Documents/danielsundfeld-hpc/seqs')
     #with open("teste.txt") as file:
-    with open('/home/livanski/Music/upload_final/django-upload-example/media/arquivo.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta') as file:
         for line in file:
             hamb.append(line)
 
@@ -142,5 +142,5 @@ def data_visualization2():
      # exibe
     #pylab.savefig('/home/livanski/Pictures/graph.png', dpi=100)
     #pylab.savefig('/home/livanski/Music/upload_final/django-upload-example/static/graph.png', dpi=100)
-    pylab.savefig('/home/livanski/Music/upload_final/django-upload-example/mysite/static/css/graph_upload.png', dpi=100)
+    pylab.savefig('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/mysite/static/css/graph_upload.png', dpi=100)
     return pylab.show

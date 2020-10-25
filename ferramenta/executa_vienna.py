@@ -9,7 +9,7 @@ novo2 = []
 def abre_arquivo():
     hamb = []
     lista = []
-    with open('/home/livanski/Downloads/ViennaRNA-2.3.3/resultado_cuda_sankoff.txt') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3/resultado_cuda_sankoff.txt') as file:
         for line in file:
             hamb.append(line)
     lista.append(hamb[4])
@@ -56,11 +56,11 @@ print()
 
 def le_resultado():
     lista = []
-    leitura = open('/home/livanski/Downloads/ViennaRNA-2.3.3/resultado_cuda_sankoff.txt')
+    leitura = open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3/resultado_cuda_sankoff.txt')
 
 
 
-    with open('/home/livanski/Downloads/ViennaRNA-2.3.3/resultado_cuda_sankoff.txt') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3/resultado_cuda_sankoff.txt') as file:
         for line in file:
             lista.append(line)
 
@@ -69,16 +69,6 @@ def le_resultado():
 print(le_resultado()[4])
 print(le_resultado()[5])
 
-def limpar(lista):
-    lista_limpa = []
-    for x in lista:
-        item = x
-        for y in ['\n', '\t', '/', 't', 'seq', ':', '[', ']', ' ']:
-            item = item.replace(y, "")
-            item = item.replace(y, "")
-
-        lista_limpa.append(item)
-    return lista_limpa
 
 
 
@@ -89,7 +79,7 @@ def exe_vi():
     import subprocess
 
     subprocess.check_output(['./RNAplot_one_seq.sh', 'CCCAAAGGG', '(((...))).'],
-                            cwd='/home/livanski/Downloads/ViennaRNA-2.3.3/')
+                            cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3')
 exe_vi()
 #executa_vienna(limpar(le_resultado()))
 

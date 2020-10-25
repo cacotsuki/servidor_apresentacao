@@ -7,10 +7,10 @@ from pylab import *
 import re
 
 def linux_upload():
-    subprocess.check_output(['dos2unix', 'arquivo.fasta'], cwd='/home/livanski/Music/upload_final/django-upload-example/media')
+    subprocess.check_output(['dos2unix', 'arquivo.fasta'], cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media')
     a = subprocess.check_output(
-        ['./bin/sankoff', '/home/livanski/Music/upload_final/django-upload-example/media/arquivo.fasta'],
-        cwd='/home/livanski/Documents/danielsundfeld-hpc')
+        ['./bin/sankoff', '/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta'],
+        cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/danielsundfeld-hpc')
 
     file = open('resultado_cuda_sankoff_upload.txt', 'w')
     file.write(str(a,'utf-8'))
@@ -18,9 +18,9 @@ def linux_upload():
     return a.decode('utf-8')
 
 def salva_na_pasta_vienna_upload():
-    subprocess.check_output(['dos2unix', 'arquivo.fasta'], cwd='/home/livanski/Music/upload_final/django-upload-example/media')
+    subprocess.check_output(['dos2unix', 'arquivo.fasta'], cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media')
     a = subprocess.check_output(['./bin/sankoff', '/home/livanski/Music/upload_final/django-upload-example/media/arquivo.fasta'],
-                               cwd='/home/livanski/Documents/danielsundfeld-hpc')
+                               cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/danielsundfeld-hpc')
     str(a, 'utf-8')
     vienna = open('/home/livanski/Downloads/ViennaRNA-2.3.3/resultado_cuda_sankoff_upload.txt', 'w')
     vienna.write(str(a, 'utf-8'))
@@ -28,14 +28,14 @@ def salva_na_pasta_vienna_upload():
 
 def gera_imagem_upload():
     subprocess.check_output(['python3', 'gera_imagem_upload.py'],
-                            cwd='/home/livanski/Downloads/ViennaRNA-2.3.3')
+                            cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3')
 def converte_e_transfere_upload():
     subprocess.check_output(['./django_upload.sh'],
-                            cwd='/home/livanski/Downloads/ViennaRNA-2.3.3')
+                            cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3')
 
 def executa_shell():
     subprocess.check_output(['./copia_para_vienna.sh'],
-                            cwd='/home/livanski/Music/upload_final/django-upload-example')
+                            cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3')
 
 def le_upload():
     hamb = []
@@ -46,7 +46,7 @@ def le_upload():
     return hamb
 
 def remove_fasta_apos_execucao():
-    subprocess.check_output(['rm', '-f', 'arquivo.fasta'],cwd='/home/livanski/Music/upload_final/django-upload-example/media')
+    subprocess.check_output(['rm', '-f', 'arquivo.fasta'],cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media')
 
 def renomeia_fasta_upload():
     subprocess.check_output([''])
@@ -76,20 +76,6 @@ def abre_arquivo():
 
 
 
-
-def abre_arquivo():
-    seq1 = []
-    seq2 = []
-    seq_mid = []
-    hamb = []
-    lista = []
-    with open('/home/livanski/Music/upload_final/django-upload-example/media/arquivo.fasta') as file:
-        for line in file:
-            hamb.append(line)
-    lista.append(hamb[4])
-    lista.append(hamb[5])
-    lista.append(hamb[6])
-    return lista
 
 def limpar(lista):
     lista_limpa = []
@@ -176,7 +162,7 @@ def data_visualization2():
     hamb = []
     #subprocess.check_output(['dos2unix', 'write.fasta'], cwd='/home/livanski/Documents/danielsundfeld-hpc/seqs')
     #with open("teste.txt") as file:
-    with open('/home/livanski/Music/upload_final/django-upload-example/media/arquivo.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta') as file:
         for line in file:
             hamb.append(line)
 
@@ -195,7 +181,7 @@ def data_visualization2():
      # exibe
     #pylab.savefig('/home/livanski/Pictures/graph.png', dpi=100)
     #pylab.savefig('/home/livanski/Music/upload_final/django-upload-example/static/graph.png', dpi=100)
-    pylab.savefig('/home/livanski/Music/upload_final/django-upload-example/mysite/static/css/graph_upload.png', dpi=100)
+    pylab.savefig('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/mysite/static/css/graph_upload.png', dpi=100)
     return pylab.show
 
 
@@ -203,7 +189,7 @@ def remove_barra_upload():
     hamb = []
     novo = []
 
-    with open('/home/livanski/Music/upload_final/django-upload-example/media/arquivo.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta') as file:
         for line in file:
             hamb.append(line)
 
