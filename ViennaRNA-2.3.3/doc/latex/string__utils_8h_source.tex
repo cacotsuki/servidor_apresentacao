@@ -1,0 +1,86 @@
+\hypertarget{string__utils_8h_source}{}\section{string\+\_\+utils.\+h}
+\label{string__utils_8h_source}\index{Vienna\+R\+N\+A/string\+\_\+utils.\+h@{Vienna\+R\+N\+A/string\+\_\+utils.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_STRING\_UTILS\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_STRING\_UTILS\_H}
+00003 
+00004 \textcolor{comment}{/* make this interface backward compatible with RNAlib < 2.2.0 */}
+00005 \textcolor{preprocessor}{#define VRNA\_BACKWARD\_COMPAT}
+00006 
+00007 \textcolor{preprocessor}{#ifdef DEPRECATION\_WARNINGS}
+00008 \textcolor{preprocessor}{# ifdef \_\_GNUC\_\_}
+00009 \textcolor{preprocessor}{#  define DEPRECATED(func) func \_\_attribute\_\_ ((deprecated))}
+00010 \textcolor{preprocessor}{# else}
+00011 \textcolor{preprocessor}{#  define DEPRECATED(func) func}
+00012 \textcolor{preprocessor}{# endif}
+00013 \textcolor{preprocessor}{#else}
+00014 \textcolor{preprocessor}{# define DEPRECATED(func) func}
+00015 \textcolor{preprocessor}{#endif}
+00016 
+00028 \textcolor{preprocessor}{#include <stdarg.h>}
+00029 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00030 
+\hypertarget{string__utils_8h_source.tex_l00034}{}\hyperlink{group__string__utils_ga03943706e48069237cd57f2d35ca987e}{00034} \textcolor{preprocessor}{#define XSTR(s) STR(s)}
+00035 
+\hypertarget{string__utils_8h_source.tex_l00039}{}\hyperlink{group__string__utils_ga6388870e639eee9c0a69446876f1f8cc}{00039} \textcolor{preprocessor}{#define STR(s) #s}
+00040 
+00041 \textcolor{preprocessor}{#ifndef FILENAME\_MAX\_LENGTH}
+00042 
+\hypertarget{string__utils_8h_source.tex_l00049}{}\hyperlink{group__string__utils_gafb228174279df9486a5cb56ac0bc79a3}{00049} \textcolor{preprocessor}{#define FILENAME\_MAX\_LENGTH   80}
+00050 
+\hypertarget{string__utils_8h_source.tex_l00057}{}\hyperlink{group__string__utils_ga33c3b1826b8e2739f09f111ec719ded5}{00057} \textcolor{preprocessor}{#define FILENAME\_ID\_LENGTH    42}
+00058 
+00059 \textcolor{preprocessor}{#endif}
+00060 
+00061 \textcolor{preprocessor}{#ifdef HAVE\_CONFIG\_H}
+00062 \textcolor{preprocessor}{#include <config.h>}
+00063 \textcolor{preprocessor}{#ifndef HAVE\_STRDUP}
+00064 \textcolor{keywordtype}{char} *strdup(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s);
+00065 \textcolor{preprocessor}{#endif}
+00066 \textcolor{preprocessor}{#endif}
+00067 
+00086 \textcolor{keywordtype}{char} *\hyperlink{group__string__utils_ga33cc0190a326ec368277caa777b8bf18}{vrna\_strdup\_printf}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *format, ...);
+00087 
+00088 
+00103 \textcolor{keywordtype}{char} *\hyperlink{group__string__utils_ga459fdee190ed81bb7773cbaf671748a9}{vrna\_strdup\_vprintf}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *format, va\_list argp);
+00104 
+00105 
+00124 \textcolor{keywordtype}{int} \hyperlink{group__string__utils_gac0771ec71316023067f2aae61a5aa0fb}{vrna\_strcat\_printf}(\textcolor{keywordtype}{char} **dest, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *format, ...);
+00125 
+00126 
+00139 \textcolor{keywordtype}{int} \hyperlink{group__string__utils_ga122df216996ba62fd5056b7743e3131a}{vrna\_strcat\_vprintf}(\textcolor{keywordtype}{char} **dest, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *format, va\_list args);
+00140 
+00141 
+00149 \textcolor{keywordtype}{char}  *\hyperlink{group__string__utils_ga4eeb3750dcf860b9f3158249f95dbd7f}{vrna\_random\_string}(\textcolor{keywordtype}{int} l, \textcolor{keyword}{const} \textcolor{keywordtype}{char} symbols[]);
+00150 
+00158 \textcolor{keywordtype}{int} \hyperlink{group__string__utils_ga301798b43b6f66687985c725efd14f32}{vrna\_hamming\_distance}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *s2);
+00159 
+00170 \textcolor{keywordtype}{int} \hyperlink{group__string__utils_ga5d1c2271e79d9bcb52d4e68360763fb9}{vrna\_hamming\_distance\_bound}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *s2, \textcolor{keywordtype}{int} n);
+00171 
+00179 \textcolor{keywordtype}{void} \hyperlink{group__string__utils_gacfed92cba77064f6c743f9118d079bfc}{vrna\_seq\_toRNA}(\textcolor{keywordtype}{char} *sequence);
+00180 
+00186 \textcolor{keywordtype}{void} \hyperlink{group__string__utils_ga4f44dca03c9d708d68e64c0610bb9091}{vrna\_seq\_toupper}(\textcolor{keywordtype}{char} *sequence);
+00187 
+00199 \textcolor{keywordtype}{char} *\hyperlink{group__string__utils_ga74f05ece32ea73b59f84a7452afd5fae}{vrna\_cut\_point\_insert}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00200                             \textcolor{keywordtype}{int} cp);
+00201 
+00214 \textcolor{keywordtype}{char} *\hyperlink{group__string__utils_ga1fbd821d4408cc5f1dd9d12c15e092cb}{vrna\_cut\_point\_remove}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string},
+00215                             \textcolor{keywordtype}{int} *cp);
+00216 
+00221 \textcolor{preprocessor}{#ifdef  VRNA\_BACKWARD\_COMPAT}
+00222 
+00227 DEPRECATED(\textcolor{keywordtype}{void}  \hyperlink{string__utils_8h_a17b796b806f96b70382077fb5bc519bb}{str\_uppercase}(\textcolor{keywordtype}{char} *sequence));
+00228 
+00234 DEPRECATED(\textcolor{keywordtype}{void} \hyperlink{string__utils_8h_ad3f18dd83f958f18b2f26ecb99305208}{str\_DNA2RNA}(\textcolor{keywordtype}{char} *sequence));
+00235 
+00241 DEPRECATED(\textcolor{keywordtype}{char} *\hyperlink{string__utils_8h_a1b95eac365a021572e1c37e5993a89be}{random\_string}(\textcolor{keywordtype}{int} l, \textcolor{keyword}{const} \textcolor{keywordtype}{char} symbols[]));
+00242 
+00248 DEPRECATED(\textcolor{keywordtype}{int} \hyperlink{string__utils_8h_ad9dc7bfc9aa664dc6698f17ce07fc7e7}{hamming}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *s2));
+00249 
+00255 DEPRECATED(\textcolor{keywordtype}{int} \hyperlink{string__utils_8h_a96d3c36717d624514055ce201cab1542}{hamming\_bound}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *s2, \textcolor{keywordtype}{int} n));
+00256 
+00257 \textcolor{preprocessor}{#endif}
+00258 
+00259 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

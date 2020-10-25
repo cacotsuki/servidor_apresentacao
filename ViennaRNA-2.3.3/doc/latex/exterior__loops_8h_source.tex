@@ -1,0 +1,81 @@
+\hypertarget{exterior__loops_8h_source}{}\section{exterior\+\_\+loops.\+h}
+\label{exterior__loops_8h_source}\index{Vienna\+R\+N\+A/exterior\+\_\+loops.\+h@{Vienna\+R\+N\+A/exterior\+\_\+loops.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_EXTERIOR\_LOOPS\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_EXTERIOR\_LOOPS\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00005 \textcolor{preprocessor}{#include <\hyperlink{params_8h}{ViennaRNA/params.h}>}
+00006 
+\hypertarget{exterior__loops_8h_source.tex_l00025}{}\hyperlink{group__loops}{00025} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{
+00026   \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}  *qq;
+00027   \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}  *qq1;
+00028 
+00029   \textcolor{keywordtype}{int}         qqu\_size;
+00030   \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}  **qqu;
+00031 \} \hyperlink{group__loops_structvrna__mx__pf__aux__el__t}{vrna\_mx\_pf\_aux\_el\_t};
+00032 
+00033 
+00052 \textcolor{keywordtype}{int} \hyperlink{exterior__loops_8h_a05c6288c5a79d3bd5ad6d33c1bb34bd0}{E\_ExtLoop}(\textcolor{keywordtype}{int} type,
+00053               \textcolor{keywordtype}{int} si1,
+00054               \textcolor{keywordtype}{int} sj1,
+00055               \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *P);
+00056 
+00062 \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} \hyperlink{exterior__loops_8h_a446828a191c127861e76e2c84055f672}{exp\_E\_ExtLoop}( \textcolor{keywordtype}{int} type,
+00063                       \textcolor{keywordtype}{int} si1,
+00064                       \textcolor{keywordtype}{int} sj1,
+00065                       \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t} *P);
+00066 
+00112 \textcolor{keywordtype}{int} \hyperlink{exterior__loops_8h_a51f9851f3500c2aae66674142a6a2dd5}{E\_Stem}( \textcolor{keywordtype}{int} type,
+00113             \textcolor{keywordtype}{int} si1,
+00114             \textcolor{keywordtype}{int} sj1,
+00115             \textcolor{keywordtype}{int} extLoop,
+00116             \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *P);
+00117 
+00126 \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} \hyperlink{exterior__loops_8h_ab0aa9833ab41875a91a9be8a5ffd7092}{exp\_E\_Stem}(\textcolor{keywordtype}{int} type,
+00127                   \textcolor{keywordtype}{int} si1,
+00128                   \textcolor{keywordtype}{int} sj1,
+00129                   \textcolor{keywordtype}{int} extLoop,
+00130                   \hyperlink{group__energy__parameters_structvrna__exp__param__s}{vrna\_exp\_param\_t} *P);
+00131 
+00132 
+00133 \textcolor{keywordtype}{int}
+00134 E\_ext\_loop( \textcolor{keywordtype}{int} i,
+00135             \textcolor{keywordtype}{int} j,
+00136             \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc);
+00137 
+00138 \textcolor{keywordtype}{void}
+00139 E\_ext\_loop\_5( \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc);
+00140 
+00141 \textcolor{keywordtype}{int}
+00142 vrna\_BT\_ext\_loop\_f5(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00143                     \textcolor{keywordtype}{int} *k,
+00144                     \textcolor{keywordtype}{int} *i,
+00145                     \textcolor{keywordtype}{int} *j,
+00146                     \hyperlink{group__data__structures_structvrna__bp__stack__s}{vrna\_bp\_stack\_t} *bp\_stack,
+00147                     \textcolor{keywordtype}{int} *stack\_count);
+00148 
+00149 
+00150 \hyperlink{group__loops_structvrna__mx__pf__aux__el__t}{vrna\_mx\_pf\_aux\_el\_t} *
+00151 vrna\_exp\_E\_ext\_fast\_init(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc);
+00152 
+00153 
+00154 \textcolor{keywordtype}{void}
+00155 vrna\_exp\_E\_ext\_fast\_rotate( \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00156                             \hyperlink{group__loops_structvrna__mx__pf__aux__el__t}{vrna\_mx\_pf\_aux\_el\_t}   *aux\_mx);
+00157 
+00158 
+00159 \textcolor{keywordtype}{void}
+00160 vrna\_exp\_E\_ext\_fast\_free( \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00161                           \hyperlink{group__loops_structvrna__mx__pf__aux__el__t}{vrna\_mx\_pf\_aux\_el\_t}   *aux\_mx);
+00162 
+00163 
+00164 \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL}
+00165 vrna\_exp\_E\_ext\_fast(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}  *vc,
+00166                     \textcolor{keywordtype}{int}                   i,
+00167                     \textcolor{keywordtype}{int}                   j,
+00168                     \hyperlink{group__loops_structvrna__mx__pf__aux__el__t}{vrna\_mx\_pf\_aux\_el\_t}   *aux\_mx);
+00169 
+00175 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

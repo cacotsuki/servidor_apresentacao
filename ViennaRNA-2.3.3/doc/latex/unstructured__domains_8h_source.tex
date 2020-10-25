@@ -1,0 +1,130 @@
+\hypertarget{unstructured__domains_8h_source}{}\section{unstructured\+\_\+domains.\+h}
+\label{unstructured__domains_8h_source}\index{Vienna\+R\+N\+A/unstructured\+\_\+domains.\+h@{Vienna\+R\+N\+A/unstructured\+\_\+domains.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_UNSTRUCTURED\_DOMAIN\_H}
+00002 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_UNSTRUCTURED\_DOMAIN\_H}
+00003 
+\hypertarget{unstructured__domains_8h_source.tex_l00063}{}\hyperlink{group__domains__up_ga0009117b14d29143e8b18ab891f48c2d}{00063} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{group__domains__up_structvrna__unstructured__domain__s}{vrna\_unstructured\_domain\_s}  \hyperlink{group__domains__up_structvrna__unstructured__domain__s}{vrna\_ud\_t};
+00064 
+00065 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_unstructured\_domain\_motif\_s}  
+      \hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_ud\_motif\_t};
+00066 
+00067 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00068 
+\hypertarget{unstructured__domains_8h_source.tex_l00073}{}\hyperlink{group__domains__up_ga60a2244cf1415fd076cc0dba92c2a96d}{00073} \textcolor{keyword}{typedef} int (\hyperlink{group__domains__up_ga60a2244cf1415fd076cc0dba92c2a96d}{vrna\_callback\_ud\_energy})(
+      \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc, \textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} j, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} loop\_type, \textcolor{keywordtype}{void} *data);
+00074 
+\hypertarget{unstructured__domains_8h_source.tex_l00079}{}\hyperlink{group__domains__up_ga79eb0224b0b6e0a86c9e8c4a1b0cad04}{00079} \textcolor{keyword}{typedef} \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} (\hyperlink{group__domains__up_ga79eb0224b0b6e0a86c9e8c4a1b0cad04}{vrna\_callback\_ud\_exp\_energy})(
+      \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc, \textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} j, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} loop\_type, \textcolor{keywordtype}{void} *data);
+00080 
+\hypertarget{unstructured__domains_8h_source.tex_l00085}{}\hyperlink{group__domains__up_ga5cb14c4f2149c3df9842a709d6d64140}{00085} \textcolor{keyword}{typedef} void (\hyperlink{group__domains__up_ga5cb14c4f2149c3df9842a709d6d64140}{vrna\_callback\_ud\_production})(
+      \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc, \textcolor{keywordtype}{void} *data);
+00086 
+\hypertarget{unstructured__domains_8h_source.tex_l00091}{}\hyperlink{group__domains__up_gae4c18aa60c657a4a856a4b41a9fbc0dc}{00091} \textcolor{keyword}{typedef} void (\hyperlink{group__domains__up_gae4c18aa60c657a4a856a4b41a9fbc0dc}{vrna\_callback\_ud\_exp\_production})(
+      \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc, \textcolor{keywordtype}{void} *data);
+00092 
+00093 
+\hypertarget{unstructured__domains_8h_source.tex_l00098}{}\hyperlink{group__domains__up_gacf121219e336f14d288a304564307f67}{00098} \textcolor{keyword}{typedef} void (\hyperlink{group__domains__up_gacf121219e336f14d288a304564307f67}{vrna\_callback\_ud\_probs\_add})(
+      \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc, \textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} j, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} loop\_type, 
+      \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} exp\_energy, \textcolor{keywordtype}{void} *data);
+00099 
+\hypertarget{unstructured__domains_8h_source.tex_l00104}{}\hyperlink{group__domains__up_ga13eb77d5c404b08a8868e382a66ab8bb}{00104} \textcolor{keyword}{typedef} \hyperlink{group__data__structures_ga31125aeace516926bf7f251f759b6126}{FLT\_OR\_DBL} (\hyperlink{group__domains__up_ga13eb77d5c404b08a8868e382a66ab8bb}{vrna\_callback\_ud\_probs\_get})(
+      \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc, \textcolor{keywordtype}{int} i, \textcolor{keywordtype}{int} j, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} loop\_type, \textcolor{keywordtype}{int} motif, \textcolor{keywordtype}{void} *data);
+00105 
+00106 
+\hypertarget{unstructured__domains_8h_source.tex_l00111}{}\hyperlink{group__domains__up_gaac911374e86236a51bfd42e1f098eaba}{00111} \textcolor{preprocessor}{#define VRNA\_UNSTRUCTURED\_DOMAIN\_EXT\_LOOP    1U}
+00112 
+\hypertarget{unstructured__domains_8h_source.tex_l00117}{}\hyperlink{group__domains__up_ga23b610ea9564346c45cc1e2bbb62adf7}{00117} \textcolor{preprocessor}{#define VRNA\_UNSTRUCTURED\_DOMAIN\_HP\_LOOP     2U}
+00118 
+\hypertarget{unstructured__domains_8h_source.tex_l00123}{}\hyperlink{group__domains__up_gac4a0feccd9654c149203200248c2716b}{00123} \textcolor{preprocessor}{#define VRNA\_UNSTRUCTURED\_DOMAIN\_INT\_LOOP    4U}
+00124 
+\hypertarget{unstructured__domains_8h_source.tex_l00129}{}\hyperlink{group__domains__up_ga67b80796655e5227a4ed662bfbe398b0}{00129} \textcolor{preprocessor}{#define VRNA\_UNSTRUCTURED\_DOMAIN\_MB\_LOOP     8U}
+00130 
+\hypertarget{unstructured__domains_8h_source.tex_l00135}{}\hyperlink{group__domains__up_gaab12b58d59be76446a9f76fad2fe624c}{00135} \textcolor{preprocessor}{#define VRNA\_UNSTRUCTURED\_DOMAIN\_MOTIF       16U}
+00136 
+\hypertarget{unstructured__domains_8h_source.tex_l00141}{}\hyperlink{group__domains__up_ga3c6be4cce70f1af9e885788856101699}{00141} \textcolor{preprocessor}{#define VRNA\_UNSTRUCTURED\_DOMAIN\_ALL\_LOOPS   (VRNA\_UNSTRUCTURED\_DOMAIN\_EXT\_LOOP |
+       VRNA\_UNSTRUCTURED\_DOMAIN\_HP\_LOOP | VRNA\_UNSTRUCTURED\_DOMAIN\_INT\_LOOP | VRNA\_UNSTRUCTURED\_DOMAIN\_MB\_LOOP)}
+00142 
+\hypertarget{unstructured__domains_8h_source.tex_l00147}{}\hyperlink{group__domains__up}{00147} \textcolor{keyword}{struct }\hyperlink{group__domains__up_structvrna__unstructured__domain__s}{vrna\_unstructured\_domain\_s} \{
+00148 
+00149   \textcolor{comment}{/*}
+00150 \textcolor{comment}{  **********************************}
+00151 \textcolor{comment}{    Keep track of all added motifs}
+00152 \textcolor{comment}{  **********************************}
+00153 \textcolor{comment}{  */}
+\hypertarget{unstructured__domains_8h_source.tex_l00154}{}\hyperlink{group__domains__up_ae17005ef8043aca2fc3864804cd5def6}{00154}   \textcolor{keywordtype}{int}                             \hyperlink{group__domains__up_ae17005ef8043aca2fc3864804cd5def6}{uniq\_motif\_count}; 
+\hypertarget{unstructured__domains_8h_source.tex_l00155}{}\hyperlink{group__domains__up_a2b484b0e19a47145db7055ada8b14159}{00155}   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}                    *\hyperlink{group__domains__up_a2b484b0e19a47145db7055ada8b14159}{uniq\_motif\_size}; 
+\hypertarget{unstructured__domains_8h_source.tex_l00157}{}\hyperlink{group__domains__up_a5ad34148ea1d2e501f3e02029449546e}{00157}   \textcolor{keywordtype}{int}                             \hyperlink{group__domains__up_a5ad34148ea1d2e501f3e02029449546e}{motif\_count};      
+\hypertarget{unstructured__domains_8h_source.tex_l00158}{}\hyperlink{group__domains__up_af285436bbdea4436ad2cedec65d48c75}{00158}   \textcolor{keywordtype}{char}                            **\hyperlink{group__domains__up_af285436bbdea4436ad2cedec65d48c75}{motif};          
+\hypertarget{unstructured__domains_8h_source.tex_l00159}{}\hyperlink{group__domains__up_a6a9f89ab7d147eb0ffd6cf8d77d178c0}{00159}   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}                    *\hyperlink{group__domains__up_a6a9f89ab7d147eb0ffd6cf8d77d178c0}{motif\_size};      
+\hypertarget{unstructured__domains_8h_source.tex_l00160}{}\hyperlink{group__domains__up_aae4f0a45419784fb7c244bce2781403d}{00160}   \textcolor{keywordtype}{double}                          *\hyperlink{group__domains__up_aae4f0a45419784fb7c244bce2781403d}{motif\_en};        
+\hypertarget{unstructured__domains_8h_source.tex_l00161}{}\hyperlink{group__domains__up_a3f0c026cced369ff176a66b2820f2057}{00161}   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}                    *\hyperlink{group__domains__up_a3f0c026cced369ff176a66b2820f2057}{motif\_type};      
+00163   \textcolor{comment}{/*}
+00164 \textcolor{comment}{  **********************************}
+00165 \textcolor{comment}{    Grammar extension for ligand}
+00166 \textcolor{comment}{    binding}
+00167 \textcolor{comment}{  **********************************}
+00168 \textcolor{comment}{  */}
+\hypertarget{unstructured__domains_8h_source.tex_l00169}{}\hyperlink{group__domains__up_ac2656d57130ac56e85212836482cbe80}{00169}   \hyperlink{group__domains__up_ga5cb14c4f2149c3df9842a709d6d64140}{vrna\_callback\_ud\_production}     *\hyperlink{group__domains__up_ac2656d57130ac56e85212836482cbe80}{prod\_cb};       
+\hypertarget{unstructured__domains_8h_source.tex_l00173}{}\hyperlink{group__domains__up_a181ae6ec67f77e68899ec6a0780f3e01}{00173}   \hyperlink{group__domains__up_gae4c18aa60c657a4a856a4b41a9fbc0dc}{vrna\_callback\_ud\_exp\_production} *\hyperlink{group__domains__up_a181ae6ec67f77e68899ec6a0780f3e01}{exp\_prod\_cb};   
+\hypertarget{unstructured__domains_8h_source.tex_l00174}{}\hyperlink{group__domains__up_a1efba765dd4ea893dc8bd7362761f99b}{00174}   \hyperlink{group__domains__up_ga60a2244cf1415fd076cc0dba92c2a96d}{vrna\_callback\_ud\_energy}         *\hyperlink{group__domains__up_a1efba765dd4ea893dc8bd7362761f99b}{energy\_cb};     
+\hypertarget{unstructured__domains_8h_source.tex_l00175}{}\hyperlink{group__domains__up_ad5aaa2530557880ae89e297f8f09aa55}{00175}   \hyperlink{group__domains__up_ga79eb0224b0b6e0a86c9e8c4a1b0cad04}{vrna\_callback\_ud\_exp\_energy}     *\hyperlink{group__domains__up_ad5aaa2530557880ae89e297f8f09aa55}{exp\_energy\_cb}; 
+\hypertarget{unstructured__domains_8h_source.tex_l00176}{}\hyperlink{group__domains__up_a8802b1b0512999a9f35202031811ce17}{00176}   \textcolor{keywordtype}{void}                            *\hyperlink{group__domains__up_a8802b1b0512999a9f35202031811ce17}{data};          
+\hypertarget{unstructured__domains_8h_source.tex_l00177}{}\hyperlink{group__domains__up_a21b3084846902172858bc53f113d05a4}{00177}   \hyperlink{group__fold__compound_ga3ae51bfd5fc3236652d1de4e3274b49b}{vrna\_callback\_free\_auxdata}      *\hyperlink{group__domains__up_a21b3084846902172858bc53f113d05a4}{free\_data};     
+\hypertarget{unstructured__domains_8h_source.tex_l00178}{}\hyperlink{group__domains__up_a457b43dfab7f4321b5d7a84e5deea5d7}{00178}   \hyperlink{group__domains__up_gacf121219e336f14d288a304564307f67}{vrna\_callback\_ud\_probs\_add}      *\hyperlink{group__domains__up_a457b43dfab7f4321b5d7a84e5deea5d7}{probs\_add};     
+\hypertarget{unstructured__domains_8h_source.tex_l00179}{}\hyperlink{group__domains__up_a0b155283bccf65c5253f31e0211ae8ff}{00179}   \hyperlink{group__domains__up_ga13eb77d5c404b08a8868e382a66ab8bb}{vrna\_callback\_ud\_probs\_get}      *\hyperlink{group__domains__up_a0b155283bccf65c5253f31e0211ae8ff}{probs\_get};     
+00180 \};
+00181 
+00182 
+\hypertarget{unstructured__domains_8h_source.tex_l00183}{}\hyperlink{structvrna__unstructured__domain__motif__s}{00183} \textcolor{keyword}{struct }\hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_unstructured\_domain\_motif\_s} \{
+00184   \textcolor{keywordtype}{int} start;
+00185   \textcolor{keywordtype}{int} number;
+00186 \};
+00187 
+00188 
+00213 \textcolor{keywordtype}{void}  \hyperlink{group__domains__up_gaec0c3313fb2951946614f920d289829a}{vrna\_ud\_add\_motif}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00214                         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\hyperlink{group__domains__up_af285436bbdea4436ad2cedec65d48c75}{motif},
+00215                         \textcolor{keywordtype}{double} \hyperlink{group__domains__up_aae4f0a45419784fb7c244bce2781403d}{motif\_en},
+00216                         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} loop\_type);
+00217 
+00218 
+00223 \textcolor{keywordtype}{int} *\hyperlink{unstructured__domains_8h_aea51485feeafed1f93222ba7db9fc3b1}{vrna\_ud\_get\_motif\_size\_at}( \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00224                                 \textcolor{keywordtype}{int} i,
+00225                                 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} loop\_type);
+00226 
+00227 
+00228 \textcolor{keywordtype}{int} *
+00229 vrna\_ud\_get\_motifs\_at(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00230                       \textcolor{keywordtype}{int} i,
+00231                       \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} loop\_type);
+00232 
+00233 
+00234 \hyperlink{structvrna__unstructured__domain__motif__s}{vrna\_ud\_motif\_t} *
+00235 vrna\_ud\_detect\_motifs(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00236                       \textcolor{keyword}{const} \textcolor{keywordtype}{char} *structure);
+00237 
+00238 
+00249 \textcolor{keywordtype}{void}  \hyperlink{group__domains__up_gada59cb0c498b812eadd010811af3f2d4}{vrna\_ud\_remove}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc);
+00250 
+00267 \textcolor{keywordtype}{void}  \hyperlink{group__domains__up_gac1f18c312b91d80089534a87d956e58b}{vrna\_ud\_set\_data}( \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}        *vc,
+00268                         \textcolor{keywordtype}{void}                        *\hyperlink{group__domains__up_a8802b1b0512999a9f35202031811ce17}{data},
+00269                         \hyperlink{group__fold__compound_ga3ae51bfd5fc3236652d1de4e3274b49b}{vrna\_callback\_free\_auxdata}  *free\_cb);
+00270 
+00305 \textcolor{keywordtype}{void} \hyperlink{group__domains__up_ga745a99f0bc72898d54de16f6e538828a}{vrna\_ud\_set\_prod\_rule\_cb}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}        *vc,
+00306                               \hyperlink{group__domains__up_ga5cb14c4f2149c3df9842a709d6d64140}{vrna\_callback\_ud\_production} *pre\_cb,
+00307                               \hyperlink{group__domains__up_ga60a2244cf1415fd076cc0dba92c2a96d}{vrna\_callback\_ud\_energy}     *e\_cb);
+00308 
+00309 
+00334 \textcolor{keywordtype}{void}  \hyperlink{group__domains__up_ga2fb1db2099da26c76247e1209ad4aa09}{vrna\_ud\_set\_exp\_prod\_rule\_cb}( 
+      \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}            *vc,
+00335                                     \hyperlink{group__domains__up_gae4c18aa60c657a4a856a4b41a9fbc0dc}{vrna\_callback\_ud\_exp\_production} *pre\_cb,
+00336                                     \hyperlink{group__domains__up_ga79eb0224b0b6e0a86c9e8c4a1b0cad04}{vrna\_callback\_ud\_exp\_energy}     *exp\_e\_cb);
+00337 
+00338 
+00339 \textcolor{keywordtype}{void}  \hyperlink{unstructured__domains_8h_a13ac877c9db89a1a5b5d9c0394148595}{vrna\_ud\_set\_prob\_cb}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t}        *vc,
+00340                           \hyperlink{group__domains__up_gacf121219e336f14d288a304564307f67}{vrna\_callback\_ud\_probs\_add}  *setter,
+00341                           \hyperlink{group__domains__up_ga13eb77d5c404b08a8868e382a66ab8bb}{vrna\_callback\_ud\_probs\_get}  *getter);
+00342 
+00343 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

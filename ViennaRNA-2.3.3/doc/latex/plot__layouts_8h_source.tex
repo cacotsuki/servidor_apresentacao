@@ -1,0 +1,40 @@
+\hypertarget{plot__layouts_8h_source}{}\section{plot\+\_\+layouts.\+h}
+\label{plot__layouts_8h_source}\index{Vienna\+R\+N\+A/plot\+\_\+layouts.\+h@{Vienna\+R\+N\+A/plot\+\_\+layouts.\+h}}
+
+\begin{DoxyCode}
+00001 
+00012 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_PLOT\_LAYOUTS\_H}
+00013 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_PLOT\_LAYOUTS\_H}
+00014 
+00015 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00016 \textcolor{preprocessor}{#include <\hyperlink{naview_8h}{ViennaRNA/naview.h}>}
+00017 
+00018 \textcolor{preprocessor}{#ifndef PI}
+00019 \textcolor{preprocessor}{#define  PI       3.141592654}
+00020 \textcolor{preprocessor}{#endif}
+00021 \textcolor{preprocessor}{#define  PIHALF       PI/2.}
+00022 
+00023 
+\hypertarget{plot__layouts_8h_source.tex_l00032}{}\hyperlink{group__plotting__utils_gae6d17b9f0a53cf5205a9181e0f8422e9}{00032} \textcolor{preprocessor}{#define VRNA\_PLOT\_TYPE\_SIMPLE     0}
+00033 
+\hypertarget{plot__layouts_8h_source.tex_l00042}{}\hyperlink{group__plotting__utils_ga94d4c863ecac2f220f76658afb92f964}{00042} \textcolor{preprocessor}{#define VRNA\_PLOT\_TYPE\_NAVIEW     1}
+00043 
+\hypertarget{plot__layouts_8h_source.tex_l00052}{}\hyperlink{group__plotting__utils_ga8c9eac631348da92136c8363ecdd9fb9}{00052} \textcolor{preprocessor}{#define VRNA\_PLOT\_TYPE\_CIRCULAR   2}
+00053 
+\hypertarget{plot__layouts_8h_source.tex_l00058}{}\hyperlink{structCOORDINATE}{00058} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{
+00059   \textcolor{keywordtype}{float} X; \textcolor{comment}{/* X coords */}
+00060   \textcolor{keywordtype}{float} Y; \textcolor{comment}{/* Y coords */}
+00061 \} \hyperlink{structCOORDINATE}{COORDINATE};
+00062 
+00075 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} \hyperlink{group__plotting__utils_ga5964c4581431b098b80027d6e14dcdd4}{rna\_plot\_type};
+00076 
+00088 \textcolor{keywordtype}{int} \hyperlink{group__plotting__utils_gaf4b9173e7d3fd361c3c85e6def194123}{simple\_xy\_coordinates}(\textcolor{keywordtype}{short} *pair\_table,
+00089                           \textcolor{keywordtype}{float} *X,
+00090                           \textcolor{keywordtype}{float} *Y);
+00091 
+00112 \textcolor{keywordtype}{int} \hyperlink{group__plotting__utils_gac4ea13d35308f09940178d2b05a248c2}{simple\_circplot\_coordinates}(\textcolor{keywordtype}{short} *pair\_table,
+00113                                 \textcolor{keywordtype}{float} *x,
+00114                                 \textcolor{keywordtype}{float} *y);
+00115 
+00121 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

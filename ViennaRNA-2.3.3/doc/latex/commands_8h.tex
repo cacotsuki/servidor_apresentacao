@@ -1,0 +1,220 @@
+\hypertarget{commands_8h}{}\section{Vienna\+R\+N\+A/commands.h File Reference}
+\label{commands_8h}\index{Vienna\+R\+N\+A/commands.\+h@{Vienna\+R\+N\+A/commands.\+h}}
+
+
+Parse and apply different commands that alter the behavior of secondary structure prediction and evaluation.  
+
+
+Include dependency graph for commands.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{commands_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvrna__command__s}{vrna\+\_\+command\+\_\+s}
+\begin{DoxyCompactList}\small\item\em List element for commands ready for application to a \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{commands_8h_ac54dec838d7b6bebd5df85f71702d324}{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+HC}~1U
+\begin{DoxyCompactList}\small\item\em Command parse/apply flag indicating hard constraints. \end{DoxyCompactList}\item 
+\#define \hyperlink{commands_8h_a8cad3c1f83e6f149829c49a186a83e21}{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SC}~2U
+\begin{DoxyCompactList}\small\item\em Command parse/apply flag indicating soft constraints. \end{DoxyCompactList}\item 
+\#define \hyperlink{commands_8h_a6c6409780698826b04ebfed9151d7649}{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+UD}~4U
+\begin{DoxyCompactList}\small\item\em Command parse/apply flag indicating unstructured domains. \end{DoxyCompactList}\item 
+\#define \hyperlink{commands_8h_af5e20210173cdb83bf70256a454f284b}{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SD}~8U
+\begin{DoxyCompactList}\small\item\em Command parse/apply flag indicating structured domains. \end{DoxyCompactList}\item 
+\#define \hyperlink{commands_8h_a0a6c88e21e366dca14958d69cd024008}{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS}
+\begin{DoxyCompactList}\small\item\em Command parse/apply flag indicating default set of commands. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structvrna__command__s}{vrna\+\_\+command\+\_\+s} \hyperlink{group__file__utils_ga92cb3b5952352b103bcb32e5a99e0e5a}{vrna\+\_\+cmd\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Typename for the command repesenting data structure \hyperlink{structvrna__command__s}{vrna\+\_\+command\+\_\+s}. \end{DoxyCompactList}\item 
+\hyperlink{group__file__utils_ga92cb3b5952352b103bcb32e5a99e0e5a}{vrna\+\_\+cmd\+\_\+t} $\ast$ \hyperlink{commands_8h_a5d2a64331cff5b1059e7d327545d8a63}{vrna\+\_\+file\+\_\+commands\+\_\+read} (const char $\ast$filename, unsigned int options)
+\begin{DoxyCompactList}\small\item\em Extract a list of commands from a command file. \end{DoxyCompactList}\item 
+int \hyperlink{commands_8h_adbe8c9622f7bcc6dcbe3448b98df8656}{vrna\+\_\+file\+\_\+commands\+\_\+apply} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, const char $\ast$filename, unsigned int options)
+\begin{DoxyCompactList}\small\item\em Apply a list of commands from a command file. \end{DoxyCompactList}\item 
+int \hyperlink{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\+\_\+commands\+\_\+apply} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, \hyperlink{group__file__utils_ga92cb3b5952352b103bcb32e5a99e0e5a}{vrna\+\_\+cmd\+\_\+t} $\ast$commands, unsigned int options)
+\begin{DoxyCompactList}\small\item\em Apply a list of commands to a \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}. \end{DoxyCompactList}\item 
+void \hyperlink{commands_8h_a926fd7632e68f3da2e2069402b80b1ab}{vrna\+\_\+commands\+\_\+free} (\hyperlink{group__file__utils_ga92cb3b5952352b103bcb32e5a99e0e5a}{vrna\+\_\+cmd\+\_\+t} $\ast$commands)
+\begin{DoxyCompactList}\small\item\em Free memory occupied by a list of commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Parse and apply different commands that alter the behavior of secondary structure prediction and evaluation. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{commands.\+h@{commands.\+h}!V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+HC@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+HC}}
+\index{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+HC@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+HC}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+HC}{VRNA_CMD_PARSE_HC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+HC~1U}\hypertarget{commands_8h_ac54dec838d7b6bebd5df85f71702d324}{}\label{commands_8h_ac54dec838d7b6bebd5df85f71702d324}
+
+
+Command parse/apply flag indicating hard constraints. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structvrna__command__s}{vrna\+\_\+command\+\_\+s}, \hyperlink{commands_8h_a5d2a64331cff5b1059e7d327545d8a63}{vrna\+\_\+file\+\_\+commands\+\_\+read()}, \hyperlink{commands_8h_adbe8c9622f7bcc6dcbe3448b98df8656}{vrna\+\_\+file\+\_\+commands\+\_\+apply()}, \hyperlink{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\+\_\+commands\+\_\+apply()} 
+\end{DoxySeeAlso}
+\index{commands.\+h@{commands.\+h}!V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SC@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SC}}
+\index{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SC@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SC}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SC}{VRNA_CMD_PARSE_SC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SC~2U}\hypertarget{commands_8h_a8cad3c1f83e6f149829c49a186a83e21}{}\label{commands_8h_a8cad3c1f83e6f149829c49a186a83e21}
+
+
+Command parse/apply flag indicating soft constraints. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structvrna__command__s}{vrna\+\_\+command\+\_\+s}, \hyperlink{commands_8h_a5d2a64331cff5b1059e7d327545d8a63}{vrna\+\_\+file\+\_\+commands\+\_\+read()}, \hyperlink{commands_8h_adbe8c9622f7bcc6dcbe3448b98df8656}{vrna\+\_\+file\+\_\+commands\+\_\+apply()}, \hyperlink{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\+\_\+commands\+\_\+apply()} 
+\end{DoxySeeAlso}
+\index{commands.\+h@{commands.\+h}!V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+UD@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+UD}}
+\index{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+UD@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+UD}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+UD}{VRNA_CMD_PARSE_UD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+UD~4U}\hypertarget{commands_8h_a6c6409780698826b04ebfed9151d7649}{}\label{commands_8h_a6c6409780698826b04ebfed9151d7649}
+
+
+Command parse/apply flag indicating unstructured domains. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structvrna__command__s}{vrna\+\_\+command\+\_\+s}, \hyperlink{commands_8h_a5d2a64331cff5b1059e7d327545d8a63}{vrna\+\_\+file\+\_\+commands\+\_\+read()}, \hyperlink{commands_8h_adbe8c9622f7bcc6dcbe3448b98df8656}{vrna\+\_\+file\+\_\+commands\+\_\+apply()}, \hyperlink{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\+\_\+commands\+\_\+apply()} 
+\end{DoxySeeAlso}
+\index{commands.\+h@{commands.\+h}!V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SD@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SD}}
+\index{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SD@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SD}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SD}{VRNA_CMD_PARSE_SD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+SD~8U}\hypertarget{commands_8h_af5e20210173cdb83bf70256a454f284b}{}\label{commands_8h_af5e20210173cdb83bf70256a454f284b}
+
+
+Command parse/apply flag indicating structured domains. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structvrna__command__s}{vrna\+\_\+command\+\_\+s}, \hyperlink{commands_8h_a5d2a64331cff5b1059e7d327545d8a63}{vrna\+\_\+file\+\_\+commands\+\_\+read()}, \hyperlink{commands_8h_adbe8c9622f7bcc6dcbe3448b98df8656}{vrna\+\_\+file\+\_\+commands\+\_\+apply()}, \hyperlink{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\+\_\+commands\+\_\+apply()} 
+\end{DoxySeeAlso}
+\index{commands.\+h@{commands.\+h}!V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS}}
+\index{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS@{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS}{VRNA_CMD_PARSE_DEFAULTS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+R\+N\+A\+\_\+\+C\+M\+D\+\_\+\+P\+A\+R\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS}\hypertarget{commands_8h_a0a6c88e21e366dca14958d69cd024008}{}\label{commands_8h_a0a6c88e21e366dca14958d69cd024008}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(   \hyperlink{commands_8h_ac54dec838d7b6bebd5df85f71702d324}{VRNA\_CMD\_PARSE\_HC} \(\backslash\)
+                                  | \hyperlink{commands_8h_a8cad3c1f83e6f149829c49a186a83e21}{VRNA\_CMD\_PARSE\_SC} \(\backslash\)
+                                  | \hyperlink{commands_8h_a6c6409780698826b04ebfed9151d7649}{VRNA\_CMD\_PARSE\_UD} \(\backslash\)
+                                  | \hyperlink{commands_8h_af5e20210173cdb83bf70256a454f284b}{VRNA\_CMD\_PARSE\_SD} \(\backslash\)
+                                )
+\end{DoxyCode}
+
+
+Command parse/apply flag indicating default set of commands. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{structvrna__command__s}{vrna\+\_\+command\+\_\+s}, \hyperlink{commands_8h_a5d2a64331cff5b1059e7d327545d8a63}{vrna\+\_\+file\+\_\+commands\+\_\+read()}, \hyperlink{commands_8h_adbe8c9622f7bcc6dcbe3448b98df8656}{vrna\+\_\+file\+\_\+commands\+\_\+apply()}, \hyperlink{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\+\_\+commands\+\_\+apply()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\index{commands.\+h@{commands.\+h}!vrna\+\_\+file\+\_\+commands\+\_\+read@{vrna\+\_\+file\+\_\+commands\+\_\+read}}
+\index{vrna\+\_\+file\+\_\+commands\+\_\+read@{vrna\+\_\+file\+\_\+commands\+\_\+read}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{vrna\+\_\+file\+\_\+commands\+\_\+read(const char $\ast$filename, unsigned int options)}{vrna_file_commands_read(const char *filename, unsigned int options)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vrna\+\_\+cmd\+\_\+t}$\ast$ vrna\+\_\+file\+\_\+commands\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename, }
+\item[{unsigned int}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8h_a5d2a64331cff5b1059e7d327545d8a63}{}\label{commands_8h_a5d2a64331cff5b1059e7d327545d8a63}
+
+
+Extract a list of commands from a command file. 
+
+Read a list of commands specified in the input file and return them as list of abstract commands
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\+\_\+commands\+\_\+apply()}, \hyperlink{commands_8h_adbe8c9622f7bcc6dcbe3448b98df8656}{vrna\+\_\+file\+\_\+commands\+\_\+apply()}, \hyperlink{commands_8h_a926fd7632e68f3da2e2069402b80b1ab}{vrna\+\_\+commands\+\_\+free()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The filename \\
+\hline
+{\em options} & Options to limit the type of commands read from the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of abstract commands 
+\end{DoxyReturn}
+\index{commands.\+h@{commands.\+h}!vrna\+\_\+file\+\_\+commands\+\_\+apply@{vrna\+\_\+file\+\_\+commands\+\_\+apply}}
+\index{vrna\+\_\+file\+\_\+commands\+\_\+apply@{vrna\+\_\+file\+\_\+commands\+\_\+apply}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{vrna\+\_\+file\+\_\+commands\+\_\+apply(vrna\+\_\+fold\+\_\+compound\+\_\+t $\ast$vc, const char $\ast$filename, unsigned int options)}{vrna_file_commands_apply(vrna_fold_compound_t *vc, const char *filename, unsigned int options)}}]{\setlength{\rightskip}{0pt plus 5cm}int vrna\+\_\+file\+\_\+commands\+\_\+apply (
+\begin{DoxyParamCaption}
+\item[{{\bf vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc, }
+\item[{const char $\ast$}]{filename, }
+\item[{unsigned int}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8h_adbe8c9622f7bcc6dcbe3448b98df8656}{}\label{commands_8h_adbe8c9622f7bcc6dcbe3448b98df8656}
+
+
+Apply a list of commands from a command file. 
+
+This function is a shortcut to directly parse a commands file and apply all successfully parsed commands to a \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} data structure. It is the same as\+: 
+\begin{DoxyCodeInclude}
+  \textcolor{keywordtype}{int}         r;
+  \hyperlink{structvrna__command__s}{vrna\_cmd\_t}  *cmds;
+
+  cmds  = \hyperlink{commands_8h_a5d2a64331cff5b1059e7d327545d8a63}{vrna\_file\_commands\_read}(filename, options);
+  r     = \hyperlink{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}{vrna\_commands\_apply}(vc, cmds, options);
+
+  \hyperlink{commands_8h_a926fd7632e68f3da2e2069402b80b1ab}{vrna\_commands\_free}(cmds);
+
+  \textcolor{keywordflow}{return} r;
+\end{DoxyCodeInclude}
+ 
+\begin{DoxyParams}{Parameters}
+{\em vc} & The \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} the command list will be applied to \\
+\hline
+{\em filename} & The filename \\
+\hline
+{\em options} & Options to limit the type of commands read from the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of commands successfully applied
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{S\+W\+I\+G Wrapper Notes}
+\item[\hyperlink{wrappers__wrappers000002}{S\+W\+I\+G Wrapper Notes}]This function is attached as method {\bfseries file\+\_\+commands\+\_\+apply()} to objects of type {\itshape fold\+\_\+compound} \end{DoxyRefDesc}
+\index{commands.\+h@{commands.\+h}!vrna\+\_\+commands\+\_\+apply@{vrna\+\_\+commands\+\_\+apply}}
+\index{vrna\+\_\+commands\+\_\+apply@{vrna\+\_\+commands\+\_\+apply}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{vrna\+\_\+commands\+\_\+apply(vrna\+\_\+fold\+\_\+compound\+\_\+t $\ast$vc, vrna\+\_\+cmd\+\_\+t $\ast$commands, unsigned int options)}{vrna_commands_apply(vrna_fold_compound_t *vc, vrna_cmd_t *commands, unsigned int options)}}]{\setlength{\rightskip}{0pt plus 5cm}int vrna\+\_\+commands\+\_\+apply (
+\begin{DoxyParamCaption}
+\item[{{\bf vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc, }
+\item[{{\bf vrna\+\_\+cmd\+\_\+t} $\ast$}]{commands, }
+\item[{unsigned int}]{options}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}{}\label{commands_8h_a5e993fc4b9602af73aaaab4d3b3cd9a9}
+
+
+Apply a list of commands to a \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vc} & The \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} the command list will be applied to \\
+\hline
+{\em commands} & The list of commands to apply \\
+\hline
+{\em options} & Options to limit the type of commands read from the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of commands successfully applied
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{S\+W\+I\+G Wrapper Notes}
+\item[\hyperlink{wrappers__wrappers000003}{S\+W\+I\+G Wrapper Notes}]This function is attached as method {\bfseries commands\+\_\+apply()} to objects of type {\itshape fold\+\_\+compound} \end{DoxyRefDesc}
+\index{commands.\+h@{commands.\+h}!vrna\+\_\+commands\+\_\+free@{vrna\+\_\+commands\+\_\+free}}
+\index{vrna\+\_\+commands\+\_\+free@{vrna\+\_\+commands\+\_\+free}!commands.\+h@{commands.\+h}}
+\subsubsection[{\texorpdfstring{vrna\+\_\+commands\+\_\+free(vrna\+\_\+cmd\+\_\+t $\ast$commands)}{vrna_commands_free(vrna_cmd_t *commands)}}]{\setlength{\rightskip}{0pt plus 5cm}void vrna\+\_\+commands\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{{\bf vrna\+\_\+cmd\+\_\+t} $\ast$}]{commands}
+\end{DoxyParamCaption}
+)}\hypertarget{commands_8h_a926fd7632e68f3da2e2069402b80b1ab}{}\label{commands_8h_a926fd7632e68f3da2e2069402b80b1ab}
+
+
+Free memory occupied by a list of commands. 
+
+Release memory occupied by a list of commands 
+\begin{DoxyParams}{Parameters}
+{\em commands} & A pointer to a list of commands \\
+\hline
+\end{DoxyParams}

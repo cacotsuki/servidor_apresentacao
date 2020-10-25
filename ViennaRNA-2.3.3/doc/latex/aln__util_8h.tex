@@ -1,0 +1,88 @@
+\hypertarget{aln__util_8h}{}\section{Vienna\+R\+N\+A/aln\+\_\+util.h File Reference}
+\label{aln__util_8h}\index{Vienna\+R\+N\+A/aln\+\_\+util.\+h@{Vienna\+R\+N\+A/aln\+\_\+util.\+h}}
+
+
+Various utility-\/ and helper-\/functions for sequence alignments and comparative structure prediction.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{aln__util_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s}
+\begin{DoxyCompactList}\small\item\em A base pair info structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s} \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Typename for the base pair info repesenting data structure \hyperlink{structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s}. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s} \hyperlink{aln__util_8h_a7b61662a793ad0aa1ea38efc3a5baacc}{pair\+\_\+info}
+\begin{DoxyCompactList}\small\item\em Old typename of \hyperlink{structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s}. \end{DoxyCompactList}\item 
+int \hyperlink{group__consensus__fold_gade5a1f2d16e7fd9a57b37d8514f08e8e}{vrna\+\_\+aln\+\_\+mpi} (const char $\ast$$\ast$alignment)
+\begin{DoxyCompactList}\small\item\em Get the mean pairwise identity in steps from ?to?(ident) \end{DoxyCompactList}\item 
+\hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} $\ast$ \hyperlink{aln__util_8h_af6421a1318586c59fea6a127ed9f65f3}{vrna\+\_\+aln\+\_\+pinfo} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, const char $\ast$structure, double threshold)
+\begin{DoxyCompactList}\small\item\em Retrieve an array of \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} structures from precomputed pair probabilities. \end{DoxyCompactList}\item 
+int \hyperlink{group__consensus__fold_gaa2d600be90844094ec145ea14a314d2f}{get\+\_\+mpi} (char $\ast$Alseq\mbox{[}$\,$\mbox{]}, int n\+\_\+seq, int length, int $\ast$mini)
+\begin{DoxyCompactList}\small\item\em Get the mean pairwise identity in steps from ?to?(ident) \end{DoxyCompactList}\item 
+void \hyperlink{group__consensus__fold_gaa3e40277c837d6f7603afe319884c786}{encode\+\_\+ali\+\_\+sequence} (const char $\ast$sequence, short $\ast$S, short $\ast$s5, short $\ast$s3, char $\ast$ss, unsigned short $\ast$as, int \hyperlink{group__model__details_gaf9202a1a09f5828dc731e2d9a10fa111}{circ})
+\begin{DoxyCompactList}\small\item\em Get arrays with encoded sequence of the alignment. \end{DoxyCompactList}\item 
+void \hyperlink{group__consensus__fold_ga8a560930f7f2582cc3967723a86cfdfa}{alloc\+\_\+sequence\+\_\+arrays} (const char $\ast$$\ast$sequences, short $\ast$$\ast$$\ast$S, short $\ast$$\ast$$\ast$S5, short $\ast$$\ast$$\ast$S3, unsigned short $\ast$$\ast$$\ast$a2s, char $\ast$$\ast$$\ast$Ss, int \hyperlink{group__model__details_gaf9202a1a09f5828dc731e2d9a10fa111}{circ})
+\begin{DoxyCompactList}\small\item\em Allocate memory for sequence array used to deal with aligned sequences. \end{DoxyCompactList}\item 
+void \hyperlink{group__consensus__fold_ga298a420a8c879202e2617b3f724fde38}{free\+\_\+sequence\+\_\+arrays} (unsigned int n\+\_\+seq, short $\ast$$\ast$$\ast$S, short $\ast$$\ast$$\ast$S5, short $\ast$$\ast$$\ast$S3, unsigned short $\ast$$\ast$$\ast$a2s, char $\ast$$\ast$$\ast$Ss)
+\begin{DoxyCompactList}\small\item\em Free the memory of the sequence arrays used to deal with aligned sequences. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Various utility-\/ and helper-\/functions for sequence alignments and comparative structure prediction. 
+
+
+
+\subsection{Typedef Documentation}
+\index{aln\+\_\+util.\+h@{aln\+\_\+util.\+h}!pair\+\_\+info@{pair\+\_\+info}}
+\index{pair\+\_\+info@{pair\+\_\+info}!aln\+\_\+util.\+h@{aln\+\_\+util.\+h}}
+\subsubsection[{\texorpdfstring{pair\+\_\+info}{pair_info}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf vrna\+\_\+pinfo\+\_\+s} {\bf pair\+\_\+info}}\hypertarget{aln__util_8h_a7b61662a793ad0aa1ea38efc3a5baacc}{}\label{aln__util_8h_a7b61662a793ad0aa1ea38efc3a5baacc}
+
+
+Old typename of \hyperlink{structvrna__pinfo__s}{vrna\+\_\+pinfo\+\_\+s}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000026}{Deprecated}]Use \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} instead! \end{DoxyRefDesc}
+
+
+\subsection{Function Documentation}
+\index{aln\+\_\+util.\+h@{aln\+\_\+util.\+h}!vrna\+\_\+aln\+\_\+pinfo@{vrna\+\_\+aln\+\_\+pinfo}}
+\index{vrna\+\_\+aln\+\_\+pinfo@{vrna\+\_\+aln\+\_\+pinfo}!aln\+\_\+util.\+h@{aln\+\_\+util.\+h}}
+\subsubsection[{\texorpdfstring{vrna\+\_\+aln\+\_\+pinfo(vrna\+\_\+fold\+\_\+compound\+\_\+t $\ast$vc, const char $\ast$structure, double threshold)}{vrna_aln_pinfo(vrna_fold_compound_t *vc, const char *structure, double threshold)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf vrna\+\_\+pinfo\+\_\+t}$\ast$ vrna\+\_\+aln\+\_\+pinfo (
+\begin{DoxyParamCaption}
+\item[{{\bf vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc, }
+\item[{const char $\ast$}]{structure, }
+\item[{double}]{threshold}
+\end{DoxyParamCaption}
+)}\hypertarget{aln__util_8h_af6421a1318586c59fea6a127ed9f65f3}{}\label{aln__util_8h_af6421a1318586c59fea6a127ed9f65f3}
+
+
+Retrieve an array of \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} structures from precomputed pair probabilities. 
+
+This array of structures contains information about positionwise pair probabilies, base pair entropy and more
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t}, and \hyperlink{group__pf__fold_ga29e256d688ad221b78d37f427e0e99bc}{vrna\+\_\+pf()}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em vc} & The \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} of type \hyperlink{group__fold__compound_gga01a4ff86fa71deaaa5d1abbd95a1447dab821ce46ea3cf665be97df22a76f5023}{V\+R\+N\+A\+\_\+\+F\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+I\+VE} with precomputed partition function matrices \\
+\hline
+{\em structure} & An optional structure in dot-\/bracket notation (Maybe N\+U\+LL) \\
+\hline
+{\em threshold} & Do not include results with pair probabilities below threshold \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{group__aln__utils_ga6660dfca23debee7306e0cd53341263f}{vrna\+\_\+pinfo\+\_\+t} array 
+\end{DoxyReturn}

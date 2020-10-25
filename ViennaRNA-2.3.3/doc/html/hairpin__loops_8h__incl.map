@@ -1,0 +1,21 @@
+<map id="ViennaRNA/hairpin_loops.h" name="ViennaRNA/hairpin_loops.h">
+<area shape="rect" id="node4" href="$utils_8h.html" title="General utility&#45; and helper&#45;functions used throughout the ViennaRNA Package. " alt="" coords="962,80,1093,107"/>
+<area shape="rect" id="node7" href="$data__structures_8h.html" title="Various data structures and pre&#45;processor macros. " alt="" coords="648,244,844,271"/>
+<area shape="rect" id="node11" href="$params_8h.html" title="Functions to deal with sets of energy parameters. " alt="" coords="1279,326,1429,353"/>
+<area shape="rect" id="node22" href="$string__utils_8h.html" title="General utility&#45; and helper&#45;functions for RNA sequence and structure strings used throughout the Vien..." alt="" coords="763,162,932,189"/>
+<area shape="rect" id="node23" href="$structure__utils_8h.html" title="Various utility&#45; and helper&#45;functions for secondary structure parsing, converting, etc. " alt="" coords="1186,155,1333,196"/>
+<area shape="rect" id="node24" href="$file__utils_8h.html" title="Several utilities for file handling. " alt="" coords="1007,162,1162,189"/>
+<area shape="rect" id="node25" href="$alphabet_8h.html" title="Functions to process, convert, and generally handle different nucleotide and/or base pair alphabets..." alt="" coords="1335,244,1490,271"/>
+<area shape="rect" id="node8" href="$energy__const_8h.html" title="Energy parameter constants. " alt="" coords="1187,415,1371,442"/>
+<area shape="rect" id="node10" href="$model_8h.html" title="The model details data structure and its corresponding modifiers. " alt="" coords="1395,415,1537,442"/>
+<area shape="rect" id="node12" href="$dp__matrices_8h.html" title="Functions to deal with standard dynamic programming (DP) matrices. " alt="" coords="925,326,1103,353"/>
+<area shape="rect" id="node13" href="$constraints_8h.html" title="Functions and data structures for constraining secondary structure predictions and evaluation..." alt="" coords="629,326,799,353"/>
+<area shape="rect" id="node19" href="$grammar_8h.html" title="Implementations for the RNA folding grammar. " alt="" coords="27,326,185,353"/>
+<area shape="rect" id="node20" href="$structured__domains_8h.html" title="This module provides interfaces that deal with additional structured domains in the folding grammar..." alt="" coords="209,319,363,360"/>
+<area shape="rect" id="node21" href="$unstructured__domains_8h.html" title="Functions to modify unstructured domains, e.g. to incorporate ligands binding to unpaired stretches..." alt="" coords="387,319,553,360"/>
+<area shape="rect" id="node14" href="$constraints__hard_8h.html" title="Functions and data structures for handling of secondary structure hard constraints. " alt="" coords="452,408,611,449"/>
+<area shape="rect" id="node15" href="$constraints__soft_8h.html" title="Functions and data structures for secondary structure soft constraints. " alt="" coords="635,408,793,449"/>
+<area shape="rect" id="node16" href="$constraints__SHAPE_8h.html" title="This module provides function to incorporate SHAPE reactivity data into the folding recursions by mea..." alt="" coords="817,408,976,449"/>
+<area shape="rect" id="node17" href="$perturbation__fold_8h.html" title="Find a vector of perturbation energies that minimizes the discripancies between predicted and observe..." alt="" coords="1001,408,1163,449"/>
+<area shape="rect" id="node18" href="$constraints__ligand_8h.html" title="Functions for incorporation of ligands binding to hairpin and interior loop motifs using the soft con..." alt="" coords="91,408,249,449"/>
+</map>

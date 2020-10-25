@@ -1,0 +1,95 @@
+\hypertarget{multibranch__loops_8h}{}\section{Vienna\+R\+N\+A/multibranch\+\_\+loops.h File Reference}
+\label{multibranch__loops_8h}\index{Vienna\+R\+N\+A/multibranch\+\_\+loops.\+h@{Vienna\+R\+N\+A/multibranch\+\_\+loops.\+h}}
+
+
+Energy evaluation of multibranch loops for M\+FE and partition function calculations.  
+
+
+Include dependency graph for multibranch\+\_\+loops.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{multibranch__loops_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{multibranch__loops_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{group__loops_structvrna__mx__pf__aux__ml__t}{vrna\+\_\+mx\+\_\+pf\+\_\+aux\+\_\+ml\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Auxiliary helper arrays for fast exterior loop computations.  \hyperlink{group__loops_structvrna__mx__pf__aux__ml__t}{More...}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{multibranch__loops_8h_a81d73d23f480f84df8cfd0042c032503}{E\+\_\+mb\+\_\+loop\+\_\+stack} (int i, int j, \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc)
+\begin{DoxyCompactList}\small\item\em Evaluate energy of a multi branch helices stacking onto closing pair (i,j) \end{DoxyCompactList}\item 
+int \hyperlink{multibranch__loops_8h_a9cb520ddfd8b3a48089a7910b045d06b}{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop} (\hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$vc, int $\ast$i, int $\ast$j, int $\ast$k, int en, int $\ast$component1, int $\ast$component2)
+\begin{DoxyCompactList}\small\item\em Backtrack the decomposition of a multi branch loop closed by $ (i,j) $. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+Energy evaluation of multibranch loops for M\+FE and partition function calculations. 
+
+
+
+\subsection{Function Documentation}
+\index{multibranch\+\_\+loops.\+h@{multibranch\+\_\+loops.\+h}!E\+\_\+mb\+\_\+loop\+\_\+stack@{E\+\_\+mb\+\_\+loop\+\_\+stack}}
+\index{E\+\_\+mb\+\_\+loop\+\_\+stack@{E\+\_\+mb\+\_\+loop\+\_\+stack}!multibranch\+\_\+loops.\+h@{multibranch\+\_\+loops.\+h}}
+\subsubsection[{\texorpdfstring{E\+\_\+mb\+\_\+loop\+\_\+stack(int i, int j, vrna\+\_\+fold\+\_\+compound\+\_\+t $\ast$vc)}{E_mb_loop_stack(int i, int j, vrna_fold_compound_t *vc)}}]{\setlength{\rightskip}{0pt plus 5cm}int E\+\_\+mb\+\_\+loop\+\_\+stack (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{{\bf vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc}
+\end{DoxyParamCaption}
+)}\hypertarget{multibranch__loops_8h_a81d73d23f480f84df8cfd0042c032503}{}\label{multibranch__loops_8h_a81d73d23f480f84df8cfd0042c032503}
+
+
+Evaluate energy of a multi branch helices stacking onto closing pair (i,j) 
+
+Computes total free energy for coaxial stacking of (i.\+j) with (i+1.k) or (k+1.j-\/1) \index{multibranch\+\_\+loops.\+h@{multibranch\+\_\+loops.\+h}!vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop@{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop}}
+\index{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop@{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop}!multibranch\+\_\+loops.\+h@{multibranch\+\_\+loops.\+h}}
+\subsubsection[{\texorpdfstring{vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop(vrna\+\_\+fold\+\_\+compound\+\_\+t $\ast$vc, int $\ast$i, int $\ast$j, int $\ast$k, int en, int $\ast$component1, int $\ast$component2)}{vrna_BT_mb_loop(vrna_fold_compound_t *vc, int *i, int *j, int *k, int en, int *component1, int *component2)}}]{\setlength{\rightskip}{0pt plus 5cm}int vrna\+\_\+\+B\+T\+\_\+mb\+\_\+loop (
+\begin{DoxyParamCaption}
+\item[{{\bf vrna\+\_\+fold\+\_\+compound\+\_\+t} $\ast$}]{vc, }
+\item[{int $\ast$}]{i, }
+\item[{int $\ast$}]{j, }
+\item[{int $\ast$}]{k, }
+\item[{int}]{en, }
+\item[{int $\ast$}]{component1, }
+\item[{int $\ast$}]{component2}
+\end{DoxyParamCaption}
+)}\hypertarget{multibranch__loops_8h_a9cb520ddfd8b3a48089a7910b045d06b}{}\label{multibranch__loops_8h_a9cb520ddfd8b3a48089a7910b045d06b}
+
+
+Backtrack the decomposition of a multi branch loop closed by $ (i,j) $. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vc} & The \hyperlink{group__fold__compound_ga1b0cef17fd40466cef5968eaeeff6166}{vrna\+\_\+fold\+\_\+compound\+\_\+t} filled with all relevant data for backtracking \\
+\hline
+{\em i} & 5\textquotesingle{} position of base pair closing the loop (will be set to 5\textquotesingle{} position of leftmost decomposed block upon successful backtracking) \\
+\hline
+{\em j} & 3\textquotesingle{} position of base pair closing the loop (will be set to 3\textquotesingle{} position of rightmost decomposed block upon successful backtracking) \\
+\hline
+{\em k} & Split position that delimits leftmost from rightmost block, \mbox{[}i,k\mbox{]} and \mbox{[}k+1, j\mbox{]}, respectively. (Will be set upon successful backtracking) \\
+\hline
+{\em en} & The energy contribution of the substructure enclosed by $ (i,j) $ \\
+\hline
+{\em component1} & Type of leftmost block (1 = ML, 2 = C) \\
+\hline
+{\em component2} & Type of rightmost block (1 = ML, 2 = C) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, if backtracking succeeded, 0 otherwise. 
+\end{DoxyReturn}

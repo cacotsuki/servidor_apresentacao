@@ -1,0 +1,83 @@
+\hypertarget{subopt_8h_source}{}\section{subopt.\+h}
+\label{subopt_8h_source}\index{Vienna\+R\+N\+A/subopt.\+h@{Vienna\+R\+N\+A/subopt.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/* subopt.h */}
+00002 \textcolor{preprocessor}{#ifndef VIENNA\_RNA\_PACKAGE\_SUBOPT\_H}
+00003 \textcolor{preprocessor}{#define VIENNA\_RNA\_PACKAGE\_SUBOPT\_H}
+00004 
+00005 \textcolor{preprocessor}{#ifdef DEPRECATION\_WARNINGS}
+00006 \textcolor{preprocessor}{# ifdef \_\_GNUC\_\_}
+00007 \textcolor{preprocessor}{#  define DEPRECATED(func) func \_\_attribute\_\_ ((deprecated))}
+00008 \textcolor{preprocessor}{# else}
+00009 \textcolor{preprocessor}{#  define DEPRECATED(func) func}
+00010 \textcolor{preprocessor}{# endif}
+00011 \textcolor{preprocessor}{#else}
+00012 \textcolor{preprocessor}{# define DEPRECATED(func) func}
+00013 \textcolor{preprocessor}{#endif}
+00014 
+00021 \textcolor{preprocessor}{#define VRNA\_BACKWARD\_COMPAT}
+00022 
+\hypertarget{subopt_8h_source.tex_l00026}{}\hyperlink{subopt_8h_a01ae9a0f27d245d89f705afd843fc457}{00026} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{structvrna__subopt__sol__s}{vrna\_subopt\_sol\_s}   \hyperlink{structvrna__subopt__sol__s}{vrna\_subopt\_solution\_t};
+00027 
+\hypertarget{subopt_8h_source.tex_l00032}{}\hyperlink{group__subopt__wuchty_ga226e3803a826aba8159284d021c24d01}{00032} \textcolor{keyword}{typedef} void (\hyperlink{group__subopt__wuchty_ga226e3803a826aba8159284d021c24d01}{vrna\_subopt\_callback})(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *stucture, \textcolor{keywordtype}{float} 
+      \hyperlink{structvrna__subopt__sol__s_a99bc26ca68392aa4656386cf73b73fef}{energy}, \textcolor{keywordtype}{void} *data);
+00033 
+00034 \textcolor{preprocessor}{#ifdef VRNA\_BACKWARD\_COMPAT}
+00035 
+\hypertarget{subopt_8h_source.tex_l00040}{}\hyperlink{subopt_8h_aa0f46ff02e1017469cf902d02ecd7f9a}{00040} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\hyperlink{structvrna__subopt__sol__s}{vrna\_subopt\_sol\_s}   \hyperlink{structvrna__subopt__sol__s}{SOLUTION};
+00041 
+00042 \textcolor{preprocessor}{#endif}
+00043 
+00044 \textcolor{preprocessor}{#include <\hyperlink{data__structures_8h}{ViennaRNA/data\_structures.h}>}
+00045 \textcolor{preprocessor}{#include <\hyperlink{params_8h}{ViennaRNA/params.h}>}
+00046 
+00047 
+\hypertarget{subopt_8h_source.tex_l00051}{}\hyperlink{structvrna__subopt__sol__s}{00051} \textcolor{keyword}{struct }\hyperlink{structvrna__subopt__sol__s}{vrna\_subopt\_sol\_s} \{
+\hypertarget{subopt_8h_source.tex_l00052}{}\hyperlink{structvrna__subopt__sol__s_a99bc26ca68392aa4656386cf73b73fef}{00052}   \textcolor{keywordtype}{float} \hyperlink{structvrna__subopt__sol__s_a99bc26ca68392aa4656386cf73b73fef}{energy};       
+\hypertarget{subopt_8h_source.tex_l00053}{}\hyperlink{structvrna__subopt__sol__s_a3c632c7f08eb6a8827c6151625e5ef8e}{00053}   \textcolor{keywordtype}{char} *\hyperlink{structvrna__subopt__sol__s_a3c632c7f08eb6a8827c6151625e5ef8e}{structure};    
+00054 \};
+00055 
+\hypertarget{subopt_8h_source.tex_l00059}{}\hyperlink{subopt_8h_a5ec740b80afb4906ba4311dbd8ddbd89}{00059} \textcolor{preprocessor}{#define MAXDOS                1000}
+00060 
+00098 \hyperlink{structvrna__subopt__sol__s}{vrna\_subopt\_solution\_t} *
+00099 \hyperlink{group__subopt__wuchty_ga0f11d738fb8c8b1885a90c11c8931ff6}{vrna\_subopt}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00100             \textcolor{keywordtype}{int} delta,
+00101             \textcolor{keywordtype}{int} sorted,
+00102             FILE *fp);
+00103 
+00138 \textcolor{keywordtype}{void}
+00139 \hyperlink{group__subopt__wuchty_ga1053837e6b6f158093508f8a70998352}{vrna\_subopt\_cb}( \hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc,
+00140                 \textcolor{keywordtype}{int} delta,
+00141                 \hyperlink{group__subopt__wuchty_ga226e3803a826aba8159284d021c24d01}{vrna\_subopt\_callback} *cb,
+00142                 \textcolor{keywordtype}{void} *data);
+00143 
+00168 \hyperlink{structvrna__subopt__sol__s}{vrna\_subopt\_solution\_t} *
+00169 \hyperlink{group__subopt__zuker_gababde9d210eb433854f1e71da7815fbb}{vrna\_subopt\_zuker}(\hyperlink{group__fold__compound_structvrna__fc__s}{vrna\_fold\_compound\_t} *vc);
+00170 
+00177 \textcolor{keyword}{extern}  \textcolor{keywordtype}{double}  \hyperlink{group__subopt__wuchty_ga5e57d914bcb5feeecdf520e25313fcfe}{print\_energy};
+00178 
+00185 \textcolor{keyword}{extern}  \textcolor{keywordtype}{int}     \hyperlink{group__subopt__wuchty_ga873cf8ed69e0437f8efa8b1fec854a0e}{subopt\_sorted};
+00186 
+00203 \textcolor{keyword}{extern}  \textcolor{keywordtype}{int}     \hyperlink{group__dos_ga937634a76b46a22530a74906f1957a9e}{density\_of\_states}[\hyperlink{subopt_8h_a5ec740b80afb4906ba4311dbd8ddbd89}{MAXDOS}+1];
+00204  \textcolor{comment}{/* End of group dos */}
+00206 
+00207 \textcolor{preprocessor}{#ifdef VRNA\_BACKWARD\_COMPAT}
+00208 
+00226 DEPRECATED(\hyperlink{structvrna__subopt__sol__s}{SOLUTION} *\hyperlink{group__subopt__wuchty_ga700f662506a233e42dd7fda74fafd40e}{subopt} (\textcolor{keywordtype}{char} *seq, \textcolor{keywordtype}{char} *\hyperlink{structvrna__subopt__sol__s_a3c632c7f08eb6a8827c6151625e5ef8e}{structure}, \textcolor{keywordtype}{int} delta, FILE *fp));
+00227 
+00233 DEPRECATED(\hyperlink{structvrna__subopt__sol__s}{SOLUTION} *\hyperlink{group__subopt__wuchty_gaa1e1e7031a948ebcb39a9d58d1e9842c}{subopt\_par}(\textcolor{keywordtype}{char} *seq, \textcolor{keywordtype}{char} *\hyperlink{structvrna__subopt__sol__s_a3c632c7f08eb6a8827c6151625e5ef8e}{structure}, 
+      \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *parameters, \textcolor{keywordtype}{int} delta, \textcolor{keywordtype}{int} is\_constrained, \textcolor{keywordtype}{int} is\_circular, FILE *fp));
+00234 
+00249 DEPRECATED(\hyperlink{structvrna__subopt__sol__s}{SOLUTION} *\hyperlink{group__subopt__wuchty_ga8634516e4740e0b6c9a46d2bae940340}{subopt\_circ}(\textcolor{keywordtype}{char} *seq, \textcolor{keywordtype}{char} *sequence, \textcolor{keywordtype}{int} delta, FILE *fp));
+00250 
+00265 DEPRECATED(\hyperlink{structvrna__subopt__sol__s}{SOLUTION}  *\hyperlink{group__subopt__zuker_ga0d5104e3ecf119d8eabd40aa5fe47f90}{zukersubopt}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string}));
+00266 
+00275 DEPRECATED(\hyperlink{structvrna__subopt__sol__s}{SOLUTION}  *\hyperlink{group__subopt__zuker_gab6d0ea8cc1d02f6dd831ca81043c9eb8}{zukersubopt\_par}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keywordtype}{string}, 
+      \hyperlink{group__energy__parameters_structvrna__param__s}{vrna\_param\_t} *parameters));
+00276 
+00277 
+00278 \textcolor{preprocessor}{#endif}
+00279 
+00280 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}
