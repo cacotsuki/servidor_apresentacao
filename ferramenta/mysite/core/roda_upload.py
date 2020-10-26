@@ -198,3 +198,6 @@ def remove_barra_upload():
         for y in ['l', '\t', '/', '.', '-', '(', '),', 't', 'seq2', ':', ')', '7']:
             item = item.replace(y, "")
         novo.append(item)
+
+
+    
