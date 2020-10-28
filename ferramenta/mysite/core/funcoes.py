@@ -18,8 +18,8 @@ import os
 # Segundo argumento e o mesmo segundo argumento do terminal para compilar
 # Escreve no teste.txt a saida do algoritmo
 def linux():
-    subprocess.check_output(['dos2unix', 'write2.fasta'], cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff' )
-    a = subprocess.check_output(['./bin/sankoff', 'seqs/write2.fasta'], cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff')
+    subprocess.check_output(['dos2unix', 'write2.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff' )
+    a = subprocess.check_output(['./bin/sankoff', 'seqs/write2.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff')
     str(a,'utf-8')
 
     file = open('resultado_cuda_sankoff.txt', 'w')
@@ -31,9 +31,9 @@ def linux():
     return a.decode('utf-8')
 
 def salva_na_pasta_vienna():
-    subprocess.check_output(['dos2unix', 'write2.fasta'], cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/seqs')
+    subprocess.check_output(['dos2unix', 'write2.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/seqs')
     a = subprocess.check_output(['./bin/sankoff', 'seqs/write2.fasta'],
-                               cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/seqs')
+                               cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/seqs')
     str(a, 'utf-8')
     vienna = open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff.txt', 'w')
     vienna.write(str(a, 'utf-8'))
@@ -41,13 +41,13 @@ def salva_na_pasta_vienna():
 
 def gera_imagem():
     subprocess.check_output(['python3', 'gera_imagem.py'],
-                             cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/ViennaRNA-2.3.3')
+                             cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
     subprocess.check_output(['./django.sh'],
-                            cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/ViennaRNA-2.3.3')
+                            cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 
 def executa_shell():
     subprocess.check_output(['./copia_para_vienna.sh'],
-                             cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/ViennaRNA-2.3.3')
+                             cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 
 
 
@@ -55,7 +55,7 @@ def executa_shell():
 
 # Grava num .fasta o que foi a entrada texto da home
 def write_sequence(text_area):
-    wrt = open('/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/seqs/write2.fasta', 'w')
+    wrt = open('/home/ubuntu/ferramenta_final/cuda_sankoff/seqs/write2.fasta', 'w')
 
     wrt.write(str(text_area))
     wrt.close()
@@ -63,7 +63,7 @@ def write_sequence(text_area):
 # Realiza a leitura do .fasta o que foi a entrada texto da home
 def read_sequence():
     #arch = open('/home/livanski/Documents/danielsundfeld-hpc/seqs/write.fasta','r')
-    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/seqs/write2.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/cuda_sankoff/seqs/write2.fasta') as file:
         for line in file:
             line.split('\n')
 
@@ -71,7 +71,7 @@ def remove_barra():
     hamb = []
     novo = []
 
-    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/seqs/write2.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/cuda_sankoff/seqs/write2.fasta') as file:
         for line in file:
             hamb.append(line)
 
@@ -83,7 +83,7 @@ def remove_barra():
 
 #novo é a lista com o fasta limpo
     a = "".join(novo)
-    wrt = open('/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/seqs/write2.fasta', 'w')
+    wrt = open('/home/ubuntu/ferramenta_final/cuda_sankoff/seqs/write2.fasta', 'w')
     wrt.write(a)
 
 
@@ -97,7 +97,7 @@ def create_file():
 def read_file():
    # subprocess.check_output(['dos2unix', 'write.fasta'], cwd='/home/livanski/Documents/danielsundfeld-hpc/seqs')
     #ler = open('teste.txt', 'r')
-    ler = open('/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/seqs/write2.fasta','r')
+    ler = open('/home/ubuntu/ferramenta_final/cuda_sankoff/seqs/write2.fasta','r')
     read = ler.readline()
     return read
 
@@ -132,7 +132,7 @@ def data_visualization():
     hamb = []
     #subprocess.check_output(['dos2unix', 'write.fasta'], cwd='/home/livanski/Documents/danielsundfeld-hpc/seqs')
     #with open("teste.txt") as file:
-    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/cuda_sankoff/seqs/write2.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/cuda_sankoff/seqs/write2.fasta') as file:
         for line in file:
             hamb.append(line)
 

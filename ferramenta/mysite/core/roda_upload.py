@@ -10,7 +10,7 @@ def linux_upload():
     subprocess.check_output(['dos2unix', 'arquivo.fasta'], cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media')
     a = subprocess.check_output(
         ['./bin/sankoff', '/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta'],
-        cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/danielsundfeld-hpc')
+        cwd='/home/ubuntu/ferramenta_final/cuda_sankoff')
 
     file = open('resultado_cuda_sankoff_upload.txt', 'w')
     file.write(str(a,'utf-8'))
@@ -20,33 +20,33 @@ def linux_upload():
 def salva_na_pasta_vienna_upload():
     subprocess.check_output(['dos2unix', 'arquivo.fasta'], cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media')
     a = subprocess.check_output(['./bin/sankoff', '/home/livanski/Music/upload_final/django-upload-example/media/arquivo.fasta'],
-                               cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/danielsundfeld-hpc')
+                               cwd='/home/ubuntu/ferramenta_final/cuda_sankoff')
     str(a, 'utf-8')
-    vienna = open('/home/livanski/Downloads/ViennaRNA-2.3.3/resultado_cuda_sankoff_upload.txt', 'w')
+    vienna = open('/home/ubuntu/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff_upload.txt', 'w')
     vienna.write(str(a, 'utf-8'))
     vienna.close()
 
 def gera_imagem_upload():
     subprocess.check_output(['python3', 'gera_imagem_upload.py'],
-                            cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3')
+                            cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 def converte_e_transfere_upload():
     subprocess.check_output(['./django_upload.sh'],
-                            cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3')
+                            cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 
 def executa_shell():
     subprocess.check_output(['./copia_para_vienna.sh'],
-                            cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ViennaRNA-2.3.3')
+                            cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 
 def le_upload():
     hamb = []
 
-    with open('/home/livanski/Music/upload_final/django-upload-example/resultado_cuda_sankoff_upload.txt') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upload.txt') as file:
         for line in file:
             hamb.append(line)
     return hamb
 
 def remove_fasta_apos_execucao():
-    subprocess.check_output(['rm', '-f', 'arquivo.fasta'],cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media')
+    subprocess.check_output(['rm', '-f', 'arquivo.fasta'],cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/resultado_cuda_sankoff_upload.txt')
 
 def renomeia_fasta_upload():
     subprocess.check_output([''])
@@ -65,7 +65,7 @@ def abre_arquivo():
     seq_mid = []
     hamb = []
     lista = []
-    with open('/home/livanski/Music/upload_final/django-upload-example/resultado_cuda_sankoff_upload.txt') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upload.txt') as file:
         for line in file:
             hamb.append(line)
     lista.append(hamb[4])
@@ -129,7 +129,7 @@ def get_exec_time():
     ex = []
     exec_time = []
     exec_limpo = []
-    with open('/home/livanski/Music/upload_final/django-upload-example/resultado_cuda_sankoff_upload.txt') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upload.txt') as file:
         for line in file:
             ex.append(line)
     exec_time = ex[8]
