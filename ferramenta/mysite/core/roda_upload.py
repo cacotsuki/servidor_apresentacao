@@ -17,19 +17,19 @@ def linux_upload():
     file.close()
     return a.decode('utf-8')
 
-def salva_na_pasta_vienna_upload():
+def salva_na_pasta_vienna_upload(): #copia para o vienna o resultado do cuda_sankoff
     subprocess.check_output(['python3', 'copia_resultado_cuda.sh'],
                             cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/move_file')
 
-def gera_imagem_upload():
-    subprocess.check_output(['python3', 'gera_imagem_upload.py'],
+def gera_imagem_upload(): #gera a figura do rna com base no upload
+    subprocess.check_output(['python3', 'gera_imagem_upload.py'], 
                             cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
-def converte_e_transfere_upload():
+def converte_e_transfere_upload(): #altera o formato da img
     subprocess.check_output(['./django_upload.sh'],
                             cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 
-def executa_shell():
-    subprocess.check_output(['./copia_para_vienna.sh'],
+def executa_shell(): #copia para a pasta do projeto a img do rna convertido upload
+    subprocess.check_output(['./copia_img_upload.sh'],
                             cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 
 def le_upload():
