@@ -33,7 +33,7 @@ def linux():
 def salva_na_pasta_vienna():
     subprocess.check_output(['dos2unix', 'write2.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/seqs')
     a = subprocess.check_output(['./bin/sankoff', 'seqs/write2.fasta'],
-                               cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/seqs')
+                               cwd='/home/ubuntu/ferramenta_final/cuda_sankoff')
     str(a, 'utf-8')
     vienna = open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff.txt', 'w')
     vienna.write(str(a, 'utf-8'))
