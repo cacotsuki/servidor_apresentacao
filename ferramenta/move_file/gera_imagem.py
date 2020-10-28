@@ -41,7 +41,7 @@ def exe_vi(lista_final):
     seq1 = lista_final[0]
     seq2 = lista_final[1]
     subprocess.check_output(['./RNAplot_one_seq.sh', seq1, seq2],
-                            cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff_upload.txt')
+                            cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 
 
 #exe_vi((limpar(abre_arquivo()))
