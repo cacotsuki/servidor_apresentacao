@@ -18,7 +18,7 @@ import os
 # Segundo argumento e o mesmo segundo argumento do terminal para compilar
 # Escreve no teste.txt a saida do algoritmo
 def linux():
-    subprocess.check_output(['dos2unix', 'write2.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff' )
+    subprocess.check_output(['dos2unix', 'write2.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/seqs' )
     a = subprocess.check_output(['./bin/sankoff', 'seqs/write2.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff')
     str(a,'utf-8')
 
