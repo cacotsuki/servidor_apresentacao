@@ -8,7 +8,7 @@ novo2 = []
 def abre_arquivo():
     hamb = []
     lista = []
-    with open('/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff_upload.txt') as file:
+    with open('resultado_cuda_sankoff_upload.txt') as file:
         for line in file:
             hamb.append(line)
     lista.append(hamb[4])
@@ -30,7 +30,7 @@ def limpar(lista):
 # executa a função limpar, realizando a limpeza na lista proveniente da função abre_arquivo
 #print(limpar(abre_arquivo()))
 
-print(limpar(abre_arquivo()))
+#print(limpar(abre_arquivo()))
 
 
 #converte_to_string(limpar(abre_arquivo))
