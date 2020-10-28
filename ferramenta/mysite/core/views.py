@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import TemplateView, ListView, CreateView
 from django.core.files.storage import FileSystemStorage
 from django.urls import reverse_lazy
-from .funcoes import linux, manipulate_txt,write_sequence, data_visualization,remove_barra,salva_na_pasta_vienna,converte_e_transfere,gera_imagem,executa_shell
+from .funcoes import linux, manipulate_txt,write_sequence, data_visualization,remove_barra,salva_na_pasta_vienna,gera_imagem,executa_shell
 
 from .vienn2 import converte_to_string,abre_arquivo,limpar,get_exec_time
 from .vienn2_upload import converte_to_string_upload,abre_arquivo_upload,limpar_upload,get_exec_time_upload,remove_barra_upload,data_visualization2
@@ -67,8 +67,7 @@ def ferramenta(request):
             #  read_sequence()
             #executa_shell()
             salva_na_pasta_vienna()
-            gera_imagem()
-            converte_e_transfere()
+            gera_imagem()            
             get_exec_time()
             manipulate_txt()  # realiza a leitura da saida do algoritmo sankoffAPP
             # converte_to_string(limpar(abre_arquivo()))
