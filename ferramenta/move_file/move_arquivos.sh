@@ -1,1 +1,1 @@
-cp ./*  /home/livanski/Downloads/ViennaRNA-2.3.3
+cp ./*  /home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3
