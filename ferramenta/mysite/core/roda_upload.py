@@ -22,7 +22,7 @@ def salva_na_pasta_vienna_upload():
     a = subprocess.check_output(['./bin/sankoff', '/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta'],
                                cwd='/home/ubuntu/ferramenta_final/cuda_sankoff')
     str(a, 'utf-8')
-    vienna = open('/home/ubuntu/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff_upload.txt', 'w')
+    vienna = open('/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff_upload.txt', 'w')
     vienna.write(str(a, 'utf-8'))
     vienna.close()
 
