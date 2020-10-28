@@ -18,13 +18,8 @@ def linux_upload():
     return a.decode('utf-8')
 
 def salva_na_pasta_vienna_upload():
-    subprocess.check_output(['dos2unix', 'arquivo.fasta'], cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media')
-    a = subprocess.check_output(['./bin/sankoff', '/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta'],
-                               cwd='/home/ubuntu/ferramenta_final/cuda_sankoff')
-    str(a, 'utf-8')
-    vienna = open('/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff_upload.txt', 'w')
-    vienna.write(str(a, 'utf-8'))
-    vienna.close()
+    subprocess.check_output(['python3', 'copia_resultado_cuda.sh'],
+                            cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/move_file')
 
 def gera_imagem_upload():
     subprocess.check_output(['python3', 'gera_imagem_upload.py'],
