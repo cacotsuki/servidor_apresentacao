@@ -8,7 +8,7 @@ from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqUtils import GC
 import os
-
+import shutil
 
 
 
@@ -31,8 +31,9 @@ def linux():
     return a.decode('utf-8')
 
 def salva_na_pasta_vienna():
-    subprocess.check_output(['copia_resultado_vienna_input.sh'],
-                            cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
+    #subprocess.check_output(['copia_resultado_vienna_input.sh'],
+    #                       cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
+    shutil.copyfile('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff.txt', '/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff.txt')
 
 def gera_imagem():
     subprocess.check_output(['python3', 'gera_imagem.py'],
