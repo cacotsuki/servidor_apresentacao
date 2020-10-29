@@ -42,9 +42,9 @@ def gera_imagem():
                             cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 
 def executa_shell():
-    subprocess.check_output(['./copia_para_vienna.sh'],
-                             cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
-
+    #subprocess.check_output(['./copia_para_vienna.sh'],
+    #                         cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
+    shutil.copyfile('/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/rna_convertido.png', '/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/mysite/static/css/rna_convertido.png')
 
 
 
