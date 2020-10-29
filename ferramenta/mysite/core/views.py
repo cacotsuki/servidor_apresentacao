@@ -75,12 +75,14 @@ def ferramenta(request):
 
 
 
-
-
-
-            return render(request, 'result.html',
+            if seq_len(1) >= '50' and seq_len(2) >= '50':
+                return render(request, 'result.html',
                           {'read': converte_to_string(limpar(abre_arquivo())), 'exec': get_exec_time(),
                            'seq1_len': seq_len(1), 'seq2_len': seq_len(2)})
+
+
+            else:
+                return render(request, 'mensagem_erro.html')
 
 
 

@@ -20,3 +20,4 @@ def seq_len(qual_seq):
 
     return len(exibe)
 #print(seq_len(1))
+
