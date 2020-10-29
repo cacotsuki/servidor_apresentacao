@@ -3,7 +3,7 @@ def seq_len_upload(qual_seq):
     #converte()
     fasta = []
     seq = []
-    with open('/home/livanski/Music/upload_final/django-upload-example/media/arquivo.fasta') as file:
+    with open('/home/ubuntu/servidor_apresentacao/ferramenta/media/arquivo.fasta') as file:
         for line in file:
             fasta.append(line)
 
