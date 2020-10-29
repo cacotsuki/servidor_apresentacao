@@ -3,7 +3,7 @@ def seq_len(qual_seq):
     #converte()
     fasta = []
     seq = []
-    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/danielsundfeld-hpc/seqs/008.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/cuda_sankoff/seqs/008.fasta') as file:
         for line in file:
             fasta.append(line)
 
