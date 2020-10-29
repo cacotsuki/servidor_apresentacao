@@ -30,7 +30,7 @@ def limpar(lista):
 # executa a função limpar, realizando a limpeza na lista proveniente da função abre_arquivo
 #print(limpar(abre_arquivo()))
 
-print(limpar(abre_arquivo()))
+#print(limpar(abre_arquivo()))
 
 
 #converte_to_string(limpar(abre_arquivo))
