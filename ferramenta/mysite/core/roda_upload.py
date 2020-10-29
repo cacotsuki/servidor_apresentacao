@@ -22,7 +22,7 @@ def linux_upload():
 def salva_na_pasta_vienna_upload(): #copia para o vienna o resultado do cuda_sankoff
     #subprocess.check_output(['./copia_resultado_cuda.sh'],
     #                        cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/move_file')
-    shutil.copyfile('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upload', '/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff.txt')
+    shutil.copyfile('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upload.txt', '/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff.txt')
 
 def gera_imagem_upload(): #gera a figura do rna com base no upload
     subprocess.check_output(['python3', 'gera_imagem_upload.py'], 
