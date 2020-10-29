@@ -91,7 +91,7 @@ def remove_barra_upload():
     hamb = []
     novo = []
 
-    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upĺoad.txt') as file:
         for line in file:
             hamb.append(line)
 
