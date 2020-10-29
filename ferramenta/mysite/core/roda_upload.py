@@ -44,7 +44,7 @@ def le_upload():
     return hamb
 
 def remove_fasta_apos_execucao():
-    subprocess.check_output(['rm', '-f', 'arquivo.fasta'],cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/resultado_cuda_sankoff_upload.txt')
+    subprocess.check_output(['rm', '-f', 'arquivo.fasta'],cwd='/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media')
 
 def renomeia_fasta_upload():
     subprocess.check_output([''])
