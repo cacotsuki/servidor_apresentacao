@@ -19,7 +19,7 @@ import shutil
 # Escreve no teste.txt a saida do algoritmo
 def linux():
     subprocess.check_output(['dos2unix', '008.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/seqs' )
-    a = subprocess.check_output(['./bin/sankoff', 'seqs/write2.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff')
+    a = subprocess.check_output(['./bin/sankoff', 'seqs/008.fasta'], cwd='/home/ubuntu/ferramenta_final/cuda_sankoff')
     str(a,'utf-8')
 
     file = open('resultado_cuda_sankoff.txt', 'w')
