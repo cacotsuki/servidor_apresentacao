@@ -3,6 +3,7 @@
 
 {% block content %}
   <h2>Upload do arquivo FASTA</h2>
+  <p>Faça o upload de um arquivo no formato fasta com o seguinte nome: "arquivo.fasta"</p>
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" name="document">
