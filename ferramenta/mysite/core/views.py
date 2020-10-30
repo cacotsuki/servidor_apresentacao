@@ -91,11 +91,10 @@ def ferramenta(request):
 
 
             
-            if seq_len_input(1) < 41 and seq_len_input(2) < 41 :
-                if seq_len_input(1) == seq_len_input(2):
-                    return render(request, 'result.html',
-                            {'read': converte_to_string(limpar(abre_arquivo())), 'exec': get_exec_time(),
-                            'seq1_len': seq_len_input(1), 'seq2_len': seq_len_input(2)})
+            if seq_len_input(1) < 41 and seq_len_input(2) < 41 :                
+                return render(request, 'result.html',
+                        {'read': converte_to_string(limpar(abre_arquivo())), 'exec': get_exec_time(),
+                        'seq1_len': seq_len_input(1), 'seq2_len': seq_len_input(2)})
             else:
                 return render(request, 'mensagem_erro.html')
 
