@@ -1,7 +1,7 @@
 def seq_len_input(lista):
     fasta = []
     exibe = 0
-    with open('/home/livanski/Music/seq_maior/servidor_apresentacao/ferramenta/resultado_cuda_sankoff.txt') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff.txt') as file:
         for line in file:
             fasta.append(line)
 
