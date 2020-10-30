@@ -7,6 +7,8 @@ from .funcoes import linux, manipulate_txt,write_sequence, data_visualization,re
 from .vienn2 import converte_to_string,abre_arquivo,limpar,get_exec_time
 from .vienn2_upload import converte_to_string_upload,abre_arquivo_upload,limpar_upload,get_exec_time_upload,remove_barra_upload,data_visualization2
 from .seq_length import seq_len_input
+
+
 from .forms import Leitor
 from .forms import BookForm
 from .models import Book
