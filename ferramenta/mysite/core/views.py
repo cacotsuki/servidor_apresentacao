@@ -31,7 +31,7 @@ def upload(request):
 
 
         linux_upload()
-        le_upload()
+        #le_upload()
         data_visualization2()
         remove_barra_upload()
         salva_na_pasta_vienna_upload()
