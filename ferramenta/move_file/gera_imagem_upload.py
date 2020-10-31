@@ -26,8 +26,8 @@ def limpar(lista):
 
         lista_limpa.append(item)
  return lista_limpa
- 
-limpar(abre_arquivo())
+
+
 # executa a função limpar, realizando a limpeza na lista proveniente da função abre_arquivo
 #print(limpar(abre_arquivo()))
 
