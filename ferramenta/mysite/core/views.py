@@ -33,7 +33,7 @@ def upload(request):
         linux_upload()
         le_upload()
         data_visualization2()
-        remove_barra_upload()
+        #remove_barra_upload()
         salva_na_pasta_vienna_upload()
 
         gera_imagem_upload()
