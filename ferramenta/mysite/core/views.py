@@ -109,4 +109,4 @@ def sobre(request):
     return render(request,'about.html',{})
 
 def instalador(request):
-return render(request,'instalador.html',{})
+    return render(request,'instalador.html',{})
