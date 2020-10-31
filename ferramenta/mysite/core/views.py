@@ -3,7 +3,7 @@ from django.views.generic import TemplateView, ListView, CreateView
 from django.core.files.storage import FileSystemStorage
 from django.urls import reverse_lazy
 from .funcoes import linux, manipulate_txt,write_sequence, data_visualization,remove_barra,salva_na_pasta_vienna,gera_imagem,executa_shell
-from django.http import HttpResponseRedirect
+
 from .vienn2 import converte_to_string,abre_arquivo,limpar,get_exec_time
 from .vienn2_upload import converte_to_string_upload,abre_arquivo_upload,limpar_upload,get_exec_time_upload,remove_barra_upload,data_visualization2
 from .seq_length import seq_len_input
@@ -107,4 +107,4 @@ def ferramenta(request):
     return render(request, 'ferramenta.html', {'form': form})
 
 def sobre():
-    return HttpResponseRedirect('about.html')
+    return render(request,'about.html',{})
