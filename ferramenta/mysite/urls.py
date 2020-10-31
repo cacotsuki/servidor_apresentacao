@@ -12,7 +12,7 @@ urlpatterns = [
     path('ferramenta/', views.ferramenta, name='ferramenta'),
     path('resultado/', views.ferramenta, name='resultado'),
     path('resultadoupload/', views.upload, name='resultadoup'),
-    path('sobre/', views.ferramenta, name='sobre')
+    path('sobre/', views.sobre, name='sobre')
 ]
 
 if settings.DEBUG:
