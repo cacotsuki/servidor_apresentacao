@@ -38,7 +38,7 @@ def upload(request):
 
         gera_imagem_upload()
         converte_e_transfere_upload()
-        traz_imagem_upload()
+        executa_shell_upload()
 
         
 
