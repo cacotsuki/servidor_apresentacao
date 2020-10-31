@@ -8,7 +8,7 @@ novo2 = []
 def abre_arquivo():
     hamb = []
     lista = []
-    with open('resultado_cuda_sankoff_upload.txt') as file:
+    with open('/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/resultado_cuda_sankoff_upload.txt') as file:
         for line in file:
             hamb.append(line)
     lista.append(hamb[4])
