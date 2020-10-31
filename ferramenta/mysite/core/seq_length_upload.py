@@ -1,25 +1,27 @@
 import subprocess
-def seq_len_upload(qual_seq):
+def seq_len_upload(lista):
     #converte()
     fasta = []
-    seq = []
+    exibe = 0
     with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/media/arquivo.fasta') as file:
         for line in file:
             fasta.append(line)
 
+    lista_limpa = []
     for x in fasta:
         item = x
-        for y in ['\n', '\t', '/', 'seq', ':', '[', ']', ' ']:
+        for y in ['\n', '\t', '/', 't', 'seq1','seq2','A','C','G','U', ':', '[', ']','(',')']:
+            item = item.replace(y, "")
             item = item.replace(y, "")
 
-        seq.append(item)
+        lista_limpa.append(item)
 
-    if qual_seq == 1:
-        exibe = seq[1]
-    elif qual_seq == 2:
-        exibe = seq[3]
-
-    return len(exibe)
+    if lista == 1:
+        exibe = lista_limpa[1]
+    elif lista == 2:
+        exibe = lista_limpa[2]
+    
+    return int(exibe)
 
 
 
