@@ -10,7 +10,7 @@ def seq_len_upload(lista):
     lista_limpa = []
     for x in fasta:
         item = x
-        for y in ['\n', '\t', '/', 't', 'seq1','seq2','A','C','G','U', ':', '[', ']','(',')']:
+        for y in ['\n', '\t', '/', 't', 'seq1','seq2','A','C','G','U','T',':', '[', ']','(',')']:
             item = item.replace(y, "")
             item = item.replace(y, "")
 

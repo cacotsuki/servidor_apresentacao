@@ -12,7 +12,8 @@ urlpatterns = [
     path('ferramenta/', views.ferramenta, name='ferramenta'),
     path('resultado/', views.ferramenta, name='resultado'),
     path('resultadoupload/', views.upload, name='resultadoup'),
-    path('sobre/', views.sobre, name='sobre')
+    path('sobre/', views.sobre, name='sobre'),
+    path('instalador/', views.instalador, name='instalador'),
 ]
 
 if settings.DEBUG:
