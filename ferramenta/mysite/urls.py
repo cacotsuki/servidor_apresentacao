@@ -11,7 +11,8 @@ urlpatterns = [
     path('upload/', views.upload, name='upload'),
     path('ferramenta/', views.ferramenta, name='ferramenta'),
     path('resultado/', views.ferramenta, name='resultado'),
-    path('resultadoupload/', views.upload, name='resultadoup')
+    path('resultadoupload/', views.upload, name='resultadoup'),
+    path('sobre/', views.ferramenta, name='sobre')
 ]
 
 if settings.DEBUG:
