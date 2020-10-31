@@ -106,5 +106,5 @@ def ferramenta(request):
         form = Leitor(request.POST)
     return render(request, 'ferramenta.html', {'form': form})
 
-def sobre():
+def sobre(request):
     return render(request,'about.html',{})
