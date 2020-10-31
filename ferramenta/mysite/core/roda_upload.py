@@ -35,6 +35,9 @@ def executa_shell(): #copia para a pasta do projeto a img do rna convertido uplo
     subprocess.check_output(['./copia_img_upload.sh'],
                             cwd='/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3')
 
+def traz_imagem_upload():
+    shutil.copyfile('/home/ubuntu/ferramenta_final/cuda_sankoff/ViennaRNA-2.3.3/rna_convertido_upload.png', '/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/mysite/static/css/rna_convertido_upload.png')
+
 def le_upload():
     hamb = []
 

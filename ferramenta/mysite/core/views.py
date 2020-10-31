@@ -12,7 +12,7 @@ from .seq_length_upload import seq_len_upload
 from .forms import Leitor
 from .forms import BookForm
 from .models import Book
-from .roda_upload import linux_upload,le_upload,remove_fasta_apos_execucao,salva_na_pasta_vienna_upload,gera_imagem_upload,converte_e_transfere_upload #arquivo responsavel pro executar o cuda_sankoff pelo upload
+from .roda_upload import linux_upload,le_upload,remove_fasta_apos_execucao,salva_na_pasta_vienna_upload,gera_imagem_upload,converte_e_transfere_upload,traz_imagem_upload #arquivo responsavel pro executar o cuda_sankoff pelo upload
 
 
 class Home(TemplateView):
@@ -38,7 +38,7 @@ def upload(request):
 
         gera_imagem_upload()
         converte_e_transfere_upload()
-
+        traz_imagem_upload()
 
         
 
