@@ -8,12 +8,12 @@ from .vienn2 import converte_to_string,abre_arquivo,limpar,get_exec_time
 from .vienn2_upload import converte_to_string_upload,abre_arquivo_upload,limpar_upload,get_exec_time_upload,remove_barra_upload,data_visualization2
 from .seq_length import seq_len_input
 
-
+from .seq_length_upload import seq_len_upload
 from .forms import Leitor
 from .forms import BookForm
 from .models import Book
 from .roda_upload import linux_upload,le_upload,remove_fasta_apos_execucao,salva_na_pasta_vienna_upload,gera_imagem_upload,converte_e_transfere_upload #arquivo responsavel pro executar o cuda_sankoff pelo upload
-from .seq_length_upload import seq_len_upload
+
 
 class Home(TemplateView):
     template_name = 'home.html'
@@ -33,7 +33,7 @@ def upload(request):
         linux_upload()
         le_upload()
         data_visualization2()
-        #remove_barra_upload()
+        remove_barra_upload()
         salva_na_pasta_vienna_upload()
 
         gera_imagem_upload()
