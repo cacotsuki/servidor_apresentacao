@@ -45,13 +45,13 @@ def upload(request):
         if seq_len_upload(1) < 41 and seq_len_upload(2) < 41:                           
             return render(request, 'resultado_upload.html',
                     {'read': converte_to_string_upload(limpar_upload(abre_arquivo_upload())), 'exec': get_exec_time_upload(),
-                    'seq1_len': seq_len_upload(1), 'seq2_len': seq_len_upload(2)})
+                    'seq1_len': seq_len_upload(1), 'seq2_len': seq_len_upload(2),'nada':remove_fasta_apos_execucao()})
 
 
         else:
             return render(request, 'mensagem_erro.html')
 
-        remove_fasta_apos_execucao()
+        
 
 
 
