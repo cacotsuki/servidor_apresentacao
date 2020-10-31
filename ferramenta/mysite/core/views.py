@@ -84,7 +84,7 @@ def ferramenta(request):
             #executa_shell()
             salva_na_pasta_vienna()
             gera_imagem()    
-            executa_shell_upload()        
+            executa_shell()        
             get_exec_time()
             manipulate_txt()  # realiza a leitura da saida do algoritmo sankoffAPP
             # converte_to_string(limpar(abre_arquivo()))
