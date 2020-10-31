@@ -3,7 +3,7 @@ def seq_len_upload(lista):
     #converte()
     fasta = []
     exibe = 0
-    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upload.fasta') as file:
+    with open('/home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/resultado_cuda_sankoff_upload.txt') as file:
         for line in file:
             fasta.append(line)
 
